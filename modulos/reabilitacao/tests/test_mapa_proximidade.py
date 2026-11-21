@@ -1,7 +1,4 @@
-"""Testa a seleção geográfica de candidatos e as informações de coordenadas.
-
-Os casos cobrem os contratos observáveis da API e dos dados de referência.
-"""
+"""Mapeamento seguro de estabelecimentos candidatos. Dados de origem não equivalem a atendimento validado."""
 from fastapi.testclient import TestClient
 from app.main import app
 from app.geografia import pontos_sp, coordenadas_sp

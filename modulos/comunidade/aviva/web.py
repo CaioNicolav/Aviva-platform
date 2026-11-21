@@ -1,8 +1,6 @@
-"""Atende as rotas HTTP locais do painel Comunidade e seus arquivos estáticos.
-
-Lê séries climáticas e distritos dos arquivos locais, disponibiliza dados
-para o front-end e consulta OpenStreetMap para serviços e localidades.
-As consultas externas são exploratórias e não comprovam atendimento."""
+"""AVIVA | Servidor do módulo Comunidade.
+Disponibiliza o painel local, dados climáticos e consultas territoriais exploratórias.
+"""
 
 import argparse
 import csv

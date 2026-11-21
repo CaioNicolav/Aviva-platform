@@ -1,7 +1,5 @@
-"""Expõe as rotas HTTP do módulo informativo de saúde e reabilitação.
-
-Fornece guia de serviços, opções de filtros, consultas cadastrais e mapa.
-A API não realiza diagnósticos nem confirma atendimento em tempo real.
+"""AVIVA | API do módulo de Saúde e Reabilitação.
+Disponibiliza consultas informativas a serviços cadastrados e dados geográficos.
 """
 from pathlib import Path
 from fastapi import FastAPI, HTTPException, Query

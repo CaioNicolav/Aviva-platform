@@ -1,7 +1,4 @@
-"""Gera um conjunto reprodutível de eventos comunitários sintéticos.
-
-A semente fixa, as regras de distribuição temporal e os identificadores
-permitem testar agregações sem utilizar relatos pessoais reais."""
+"""Gera eventos sintéticos sem dados pessoais."""
 
 import csv
 import random

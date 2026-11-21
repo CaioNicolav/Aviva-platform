@@ -1,5 +1,4 @@
-/* Interações leves do site institucional: menu responsivo e elementos de navegação.
-   A lógica dos módulos permanece isolada em suas próprias aplicações. */
+/* AVIVA | Interações da navegação e dos componentes do site institucional. */
 (()=>{
  'use strict';
  const menuButton=document.querySelector('.menu-toggle');

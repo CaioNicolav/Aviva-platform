@@ -1,8 +1,5 @@
-"""Pesquisa exploratória de estabelecimentos e categorias em registros do CNES.
-
-A identificação por nome ou categoria não comprova habilitação profissional,
-modalidade de reabilitação, funcionamento ou disponibilidade de vagas.
-O campo ambulatorial_sus_informado reproduz apenas um dado cadastral.
+"""AVIVA | Pesquisa exploratória de estabelecimentos cadastrados no CNES.
+Cadastros encontrados não comprovam modalidade, habilitação ou disponibilidade.
 """
 import csv
 import re
@@ -21,7 +18,6 @@ def load_candidates():
     if DATA_PATH.exists():
         with DATA_PATH.open(encoding='utf-8-sig', newline='') as f:
             return list(csv.DictReader(f))
-    # Distribuição pública: CSV integral em cinco partes GZIP (bytes originais preservados).
     import gzip
     import hashlib
     import io

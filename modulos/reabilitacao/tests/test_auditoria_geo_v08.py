@@ -1,7 +1,3 @@
-"""Confere a auditoria das coordenadas e o tratamento de pontos geográficos incertos.
-
-Os casos cobrem os contratos observáveis da API e dos dados de referência.
-"""
 from app.auditoria_geo import auditoria_sp, distancia_km
 from app.geografia import pontos_sp
 from fastapi.testclient import TestClient
@@ -9,7 +5,7 @@ from app.main import app
 client=TestClient(app)
 
 def test_ubs_boracea_validada_por_fonte_municipal_em_v10():
-    # O ponto é confrontado com uma coordenada de referência municipal.
+    # O ponto antes suspeito recebeu coordenada oficial da Prefeitura.
     from app.geografia import audit_rows
     a=audit_rows()['6048633']
     assert a['status_auditoria']=='ponto_correspondente_referencia_externa'

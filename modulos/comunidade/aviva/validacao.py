@@ -1,7 +1,4 @@
-"""Valida identificadores de local e valores numéricos enviados ao monitor.
-
-A verificação recusa dados ausentes, números inválidos e medidas fora
-das faixas definidas na configuração."""
+"""Validacao das entradas do monitor."""
 
 import math
 import re

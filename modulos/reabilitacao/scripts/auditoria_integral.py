@@ -1,14 +1,5 @@
-"""Auditoria reproduzível dos cadastros de estabelecimentos em São Paulo.
-
-Sem camada independente não existe validação individual dos endereços. Este
-script realiza a triagem; o cruzamento cartográfico requer --referencia.
-
-Exemplos:
-  py -m scripts.auditoria_integral
-  py -m scripts.auditoria_integral --referencia "geosampa_2026.kmz" \
-      --fonte-url "https://prefeitura.sp.gov.br/..."
-
-Aceita CSV de pontos WGS84, GeoJSON, KML, KMZ. NÃO consulta APIs externas.
+"""AVIVA | Auditoria geográfica de cadastros de estabelecimentos em São Paulo.
+Compara pontos com referências externas sem presumir validade de endereços não verificados.
 """
 from __future__ import annotations
 import argparse,csv,json,math,os,re,statistics,unicodedata,zipfile
@@ -93,7 +84,6 @@ def get_polygon_coordinates_geojson(path):
 
 def kml_elements(content):
     root=ET.fromstring(content)
-    # namespace independent KML parsing for Point placemarks
     for p in root.iter():
         if p.tag.rsplit('}',1)[-1]!='Placemark':continue
         row={}
@@ -105,7 +95,6 @@ def kml_elements(content):
                 v=next((e for e in ch if e.tag.rsplit('}',1)[-1]=='value'),None)
                 if v is not None:row[ch.get('name')]=v.text or ''
             if tag=='coordinates' and ch.text and ch.text.strip():
-                # Coordinates may represent polygons: only accept a placemark with Point element
                 if any(e.tag.rsplit('}',1)[-1]=='Point' for e in p.iter()):
                     first=ch.text.strip().split()[0].split(',')
                     if len(first)>=2:row['longitude'],row['latitude']=first[:2]
@@ -165,7 +154,6 @@ def group_reference(records,keyfn,minn=5,maxsp=3.0):
     for k,coords in group.items():
         if len(coords)<minn:continue
         m=med(coords)
-        # Median absolute deviation limits contaminated reference groups
         d=[hav(x,m) for x in coords]
         if statistics.median(d)<=maxsp:stable[k]=(m,len(coords))
     return stable
@@ -206,7 +194,6 @@ def audit(records,official):
             if xy:
                 desloc=round(hav(xy,(lat_ref,lon_ref)),2)
                 if desloc>0.3:flags.append('cnes_diverge_referencia_externa_mais_300m')
-            # Official reference point overrides raw/secondary coordinate; GPS is an indicative equipment point
             status='ponto_correspondente_referencia_externa'
             pin='SIM'
             pos=(lat_ref,lon_ref)
@@ -240,9 +227,6 @@ def main(argv=None):
     p.add_argument('--referencia',help='Arquivo oficial de pontos: CSV, GeoJSON, KML ou KMZ')
     p.add_argument('--fonte-url',help='URL do órgão que publicou a referência (para trilha de auditoria)')
     args=p.parse_args(argv)
-    # A leitura genérica de KML/KMZ não extrai todos os campos HTML do
-    # KMZ municipal e não efetua a comparação de CEP/número exigida na v10.
-    # Para não destruir os resultados reconciliados, abortar o comando legado.
     if args.referencia and args.referencia.lower().endswith(('.kmz','.kml')):
         raise SystemExit('AVIVA 0.10: não reexecute o importador legado diretamente com KMZ/KML; isso perderia as validações de endereço. Use o cruzamento em data/cruzamento_enderecos_ubs_2026.csv e o relatório v10.')
     rows=read_records()

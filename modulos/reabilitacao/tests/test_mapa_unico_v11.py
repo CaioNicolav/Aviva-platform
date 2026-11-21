@@ -1,7 +1,3 @@
-"""Valida a consistência do mapa único e da interface apresentada ao usuário.
-
-Os casos cobrem os contratos observáveis da API e dos dados de referência.
-"""
 from fastapi.testclient import TestClient
 from app.main import app
 

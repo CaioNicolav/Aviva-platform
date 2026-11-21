@@ -1,6 +1,5 @@
--- Trigger de alerta crítico associada à inserção de uma leitura IoT.
--- O campo gerado_em registra a criação do alerta; o script recria a trigger.
--- Limiar experimental de 200 cm: não representa alerta oficial de Defesa Civil.
+-- AVIVA | Cria a trigger de alerta experimental ao registrar nível de água crítico.
+-- Este script recria a trigger no MySQL e não gera avisos oficiais à população.
 USE aviva_gs_2026;
 
 DROP TRIGGER IF EXISTS trg_alerta_critico;

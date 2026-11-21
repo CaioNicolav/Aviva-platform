@@ -1,7 +1,4 @@
-"""Formata os resultados do monitor de risco no terminal.
-
-Oculta indicadores de grupos com poucos eventos e apresenta avisos
-quando a validação rejeita uma entrada."""
+"""Apresentacao dos resultados no terminal."""
 
 from aviva.config import AVISO, LIMITES, MINIMO_EVENTOS_RANKING
 

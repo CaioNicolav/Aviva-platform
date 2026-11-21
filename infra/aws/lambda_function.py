@@ -1,9 +1,5 @@
-"""Processa arquivos JSON recebidos do S3 e grava medições no RDS MySQL.
-
-Fluxo: identifica novos objetos no prefixo configurado, valida os campos,
-classifica o nível de atenção e persiste a leitura de forma idempotente.
-Implementação de referência sujeita à configuração e validação do ambiente AWS.
-As medições de exemplo não constituem alertas oficiais à população.
+"""AVIVA | Processamento de medições IoT do S3 para o MySQL via AWS Lambda.
+Implementação de referência com leituras demonstrativas, sem alertas públicos oficiais.
 """
 import json
 import logging
@@ -16,7 +12,6 @@ from urllib.parse import unquote_plus
 LOG = logging.getLogger(__name__)
 LOG.setLevel(logging.INFO)
 
-# Valida os campos de entrada e aplica os limiares de risco configurados.
 def parse_measurement(payload):
     if not isinstance(payload, dict):
         raise ValueError("JSON precisa conter um objeto")
@@ -57,7 +52,6 @@ def parse_measurement(payload):
         "umidade_dht22_pct": payload.get("umidade_dht22_pct"),
     }
 
-# Usa Secrets Manager quando configurado; caso contrário, lê variáveis de ambiente.
 def _credentials():
     secret_arn = os.getenv("DB_SECRET_ARN")
     if secret_arn:
@@ -73,7 +67,6 @@ def _credentials():
             "database": os.getenv("DB_NAME", "aviva_gs_2026"),
             "port": int(os.getenv("DB_PORT", "3306"))}
 
-# A chave única de dispositivo e horário evita duplicar medições reenviadas.
 def persist(measurement):
     import pymysql
     cfg = _credentials()
@@ -97,7 +90,6 @@ def persist(measurement):
         conn.commit()
         return out
 
-# Processa somente eventos de criação de JSON no bucket e prefixo permitidos.
 def lambda_handler(event, context):
     import boto3
     s3 = boto3.client("s3")

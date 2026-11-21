@@ -1,9 +1,5 @@
-"""Avalia a consistência geográfica de registros CNES em São Paulo.
-
-Preserva a fonte original, considera correções pontuais documentadas e
-sinaliza coordenadas discrepantes em relação a registros do mesmo bairro.
-A análise é heurística: pontos sem verificação independente não devem ser
-interpretados como endereços confirmados.
+"""AVIVA | Auditoria exploratória de coordenadas de estabelecimentos em São Paulo.
+Sinaliza discrepâncias geográficas sem certificar endereços não verificados.
 """
 from functools import lru_cache
 from math import isfinite, radians, sin, cos, asin, sqrt

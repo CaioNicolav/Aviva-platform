@@ -1,7 +1,3 @@
-"""Confere quantitativos e filtros dos registros candidatos obtidos do CNES.
-
-Os casos cobrem os contratos observáveis da API e dos dados de referência.
-"""
 from fastapi.testclient import TestClient
 from app.main import app
 from app.cnes_exploratorio import search_candidates

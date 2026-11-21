@@ -1,7 +1,6 @@
-"""Normaliza dados horários do INMET e agrega séries diárias por estação.
-
-Preserva valores ausentes, considera o fuso de São Paulo e mantém
-metadados de origem para a leitura das séries históricas."""
+"""AVIVA | Processamento de dados meteorológicos históricos do INMET.
+Normaliza medições por estação e consolida os dados diários do módulo Comunidade.
+"""
 
 from __future__ import annotations
 
@@ -246,8 +245,6 @@ def montar_aviva_clima_diario(diretorio=RAW_DIR, saida=None):
         ]
         dias_descartados[diaria.iloc[0]["estacao"]] = len(bordas_parciais)
 
-        # Short synthetic fixtures may have no complete day from which to
-        # identify the real UTC-to-local boundary effect.
         if (diaria["horas_registradas"] == 24).any():
             diaria = diaria.drop(index=bordas_parciais.index)
         quadros.append(diaria)

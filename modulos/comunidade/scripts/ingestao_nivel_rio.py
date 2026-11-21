@@ -1,7 +1,4 @@
-"""Reserva a entrada de medições ANA/CEMADEN de nível dos rios.
-
-Verifica a disponibilidade do arquivo de origem; o parser permanece
-pendente até a inspeção de seu formato e metadados."""
+"""Valida a presença do arquivo original de nível de rio."""
 
 from pathlib import Path
 

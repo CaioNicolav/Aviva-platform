@@ -1,29 +1,19 @@
-/*
- AVIVA | Simulador ESP32 para monitoramento experimental de enchentes
- Cenario SIMULADO: HC-SR04 mede distancia ate uma superficie, DHT22 mede
- umidade relativa, e potenciometro representa o sinal analogico de
- um futuro sensor/pluviometro de chuva (nao e medicao real de chuva).
- Nao faz previsao oficial, nao envia alertas reais e nao substitui a Defesa Civil.
-
- Limiares experimentais equivalentes aos de modulos/comunidade/aviva/config.py:
- nivel_agua_cm: ATENCAO >=120, CRITICO >=200 (faixa 0-300)
- chuva_mm_h: ATENCAO >=25, CRITICO >=50 (faixa simulada 0-200)
- Se AMBOS >= ATENCAO => CRITICO combinado.
-*/
+/* AVIVA | Simulação do monitor de enchentes no ESP32.
+   Combina nível da água e chuva simulada para exibir alertas experimentais locais. */
 #include <Arduino.h>
 #include <DHTesp.h>
 #include <math.h>
 
 constexpr int PIN_TRIG = 5;
 constexpr int PIN_ECHO = 18;
-constexpr int PIN_CHUVA = 34;      // potenciometro ADC: chuva sintetica
-constexpr int PIN_DHT = 4;         // DHT22 umidade (contexto, nao nivel de risco)
-constexpr int LED_NORMAL = 23;    // verde
-constexpr int LED_ATENCAO = 22;   // amarelo
-constexpr int LED_CRITICO = 21;   // vermelho
+constexpr int PIN_CHUVA = 34;      
+constexpr int PIN_DHT = 4;         
+constexpr int LED_NORMAL = 23;    
+constexpr int LED_ATENCAO = 22;   
+constexpr int LED_CRITICO = 21;   
 constexpr int PIN_BUZZER = 19;
 
-constexpr float ALTURA_REFERENCIA_CM = 300.0f;  // instalacao ficticia
+constexpr float ALTURA_REFERENCIA_CM = 300.0f;  
 constexpr unsigned long INTERVALO_MS = 2000UL;
 constexpr unsigned long TIMEOUT_ECHO_US = 30000UL;
 
@@ -39,8 +29,8 @@ const char* rotuloNivel(Nivel n) {
   }
 }
 Nivel classificarEvento(float nivelAguaCm, float chuvaMmH) {
-  // Aplica a maior severidade identificada entre nível d'água e chuva;
-  // combinacao de duas condicoes de ATENCAO sobe para CRITICO.
+  
+  
   bool aguaCritica = nivelAguaCm >= 200.0f;
   bool chuvaCritica = chuvaMmH >= 50.0f;
   if (aguaCritica || chuvaCritica) return CRITICO;
@@ -61,7 +51,7 @@ bool lerNivelAgua(float &nivelAguaCm) {
   unsigned long duracaoUs = pulseIn(PIN_ECHO, HIGH, TIMEOUT_ECHO_US);
   if (duracaoUs == 0) {
     Serial.println("DIAGNOSTICO;HC-SR04;SEM_ECHO;VERIFICAR_FIO_AZUL_ECHO_GPIO18");
-    return false;  // sem eco, NAO afirmar NORMAL
+    return false;  
   }
 
   float distanciaCm = duracaoUs / 58.0f;
@@ -72,14 +62,12 @@ bool lerNivelAgua(float &nivelAguaCm) {
 }
 
 float lerChuvaSimulada() {
-  int leituraAdc = analogRead(PIN_CHUVA);  // 0..4095 (modelo idealizado)
+  int leituraAdc = analogRead(PIN_CHUVA);  
   leituraAdc = constrain(leituraAdc, 0, 4095);
   return 200.0f * leituraAdc / 4095.0f;
 }
 
-// Buzzer sem tone()/noTone(): evita mensagens "LEDC is not initialized"
-// no simulador. Gera pulsos digitais durante poucos milissegundos.
-// Em hardware real, prefira PWM nao bloqueante e driver adequado.
+
 void avisoSonoro(uint16_t frequenciaHz, uint16_t duracaoMs) {
   if (frequenciaHz == 0) return;
   const uint32_t meioPeriodoUs = 500000UL / frequenciaHz;
@@ -98,7 +86,7 @@ void sinalizar(Nivel nivel) {
   digitalWrite(LED_ATENCAO, nivel == ATENCAO ? HIGH : LOW);
   digitalWrite(LED_CRITICO, nivel == CRITICO ? HIGH : LOW);
   if (nivel == CRITICO) {
-    avisoSonoro(1800, 220);  // aviso local demonstrativo
+    avisoSonoro(1800, 220);  
   }
 }
 
@@ -131,8 +119,8 @@ void loop() {
   bool ambienteValido = !isnan(ambiente.humidity) &&
                         ambiente.humidity >= 0.0f && ambiente.humidity <= 100.0f;
 
-  // O nivel d'agua e a chuva determinam o alerta. O DHT22 e apenas
-  // contextual: se falhar, a umidade vira NA, sem bloquear os niveis.
+  
+  
   if (!leituraValida) {
     digitalWrite(LED_NORMAL, LOW);
     digitalWrite(LED_ATENCAO, LOW);

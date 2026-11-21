@@ -1,7 +1,3 @@
-"""Confere o cruzamento de registros CNES com referências cartográficas municipais.
-
-Os casos cobrem os contratos observáveis da API e dos dados de referência.
-"""
 from fastapi.testclient import TestClient
 from app.main import app
 from app.geografia import pontos_sp,audit_rows

@@ -1,7 +1,6 @@
-"""Consolida fontes normalizadas em tabelas de análise do módulo Comunidade.
-
-Identifica fontes indisponíveis sem inventar valores e separa dados
-públicos de eventos simulados ao compor agregações por período."""
+"""AVIVA | Consolidação de dados territoriais e ambientais.
+Agrupa fontes disponíveis e mantém eventos simulados separados dos registros oficiais.
+"""
 
 import argparse
 import csv

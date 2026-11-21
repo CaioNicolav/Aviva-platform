@@ -1,8 +1,5 @@
-"""Ponto de entrada unificado para o portal AVIVA e os módulos internos.
-
-Encaminha o painel Comunidade a um servidor HTTP local e integra as rotas
-de reabilitação da aplicação FastAPI em um único endereço de navegação.
-Execução local de referência, sem infraestrutura de produção nem dados sensíveis.
+"""AVIVA integra informações comunitárias, monitoramento territorial e serviços de saúde.
+Este arquivo reúne o site e os módulos Comunidade e Reabilitação no servidor local.
 """
 from __future__ import annotations
 import argparse
@@ -28,7 +25,6 @@ from aviva.web import ServidorAviva  # noqa: E402
 from app.main import app as health_app  # noqa: E402
 
 
-# O aplicativo ASGI distribui requisições entre páginas, arquivos e módulos.
 class PortalAVIVA:
     def __init__(self, community_port: int):
         self.community_url = f'http://127.0.0.1:{community_port}'
@@ -54,7 +50,6 @@ class PortalAVIVA:
                 elif path == '/sw.js':
                     file_path = SITE / 'sw.js'
                 else:
-                    # Static files are strictly limited to direct names under site/assets.
                     name = path[len('/assets/'):]
                     if not name or '/' in name or '\\' in name or name.startswith('.'):
                         return await Response('Arquivo não encontrado', status_code=404)(scope,receive,send)

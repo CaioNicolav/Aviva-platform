@@ -1,7 +1,4 @@
-"""Verifica marcadores, categorias e avisos de incerteza disponibilizados pelo mapa.
-
-Os casos cobrem os contratos observáveis da API e dos dados de referência.
-"""
+"""Contrato do novo mapa: todos os pontos disponíveis, com aviso na ponta do pin."""
 from fastapi.testclient import TestClient
 from app.main import app
 client=TestClient(app)

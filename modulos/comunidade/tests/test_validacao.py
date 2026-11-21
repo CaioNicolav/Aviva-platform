@@ -1,6 +1,4 @@
-"""Valida formatos de códigos locais e limites das entradas numéricas.
-
-Cobre dados aceitos e rejeitados pelo módulo de monitoramento."""
+"""Testes de validacao das entradas."""
 
 import pytest
 

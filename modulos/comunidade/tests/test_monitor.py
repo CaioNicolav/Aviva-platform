@@ -1,6 +1,4 @@
-"""Exercita o monitor com diferentes combinações de nível de água e chuva.
-
-Os testes asseguram a classificação esperada e o tratamento do histórico."""
+"""Testes de cenarios do monitor."""
 
 import pytest
 

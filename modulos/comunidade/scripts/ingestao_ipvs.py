@@ -1,7 +1,4 @@
-"""Reserva a etapa de ingestão do Índice Paulista de Vulnerabilidade Social.
-
-Confere se o arquivo-fonte está disponível. A normalização ainda depende
-da definição e validação do formato original."""
+"""Valida a presença do arquivo original do IPVS."""
 
 from pathlib import Path
 

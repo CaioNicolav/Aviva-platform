@@ -1,14 +1,5 @@
-"""Classificação territorial aproximada de São Paulo a partir dos bairros cadastrados no CNES.
-
-ATENÇÃO:
-- Zonas (Norte/Sul/Leste/Oeste/Centro) podem ser definidas oficialmente por
-  limites de distritos, mas o CNES fornece um texto de *bairro* que não equivale
-  necessariamente ao distrito administrativo.
-- Esta versão usa APENAS correspondências literais de bairros com localização
-  amplamente identificável, de maneira conservadora; casos não mapeados são
-  marcados 'nao_identificada'.
-- Não usar esse campo como comprovante de endereço ou delimitação oficial.
-- Para maior precisão, cruzar coordenadas do CNES com polígonos distritais GeoSampa.
+"""AVIVA | Agrupamento territorial aproximado dos bairros informados pelo CNES.
+A classificação por zona não equivale a delimitação administrativa oficial.
 """
 from .service import normalize
 
@@ -17,7 +8,6 @@ ZONAS = {
     'leste': 'Zona Leste', 'oeste': 'Zona Oeste',
     'nao_identificada': 'Zona não identificada',
 }
-# Correspondências explícitas para evitar inferência automática de endereços.
 BAIRROS_POR_ZONA = {
     'centro': [
         'ACLIMACAO', 'BELA VISTA', 'BOM RETIRO', 'CAMPOS ELISEOS', 'CENTRO', 'SE',

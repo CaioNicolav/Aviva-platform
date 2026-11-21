@@ -1,7 +1,6 @@
-"""Centraliza parâmetros do monitor de risco comunitário.
-
-As faixas de nível e chuva são experimentais e servem para simulação.
-Não representam critérios oficiais nem medições de sensores reais."""
+"""AVIVA | Configuração do monitor comunitário de risco.
+Os limites de nível e chuva são experimentais e não representam alertas oficiais.
+"""
 
 LIMITES = {
     "nivel_agua_cm": {

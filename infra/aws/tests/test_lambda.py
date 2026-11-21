@@ -1,8 +1,3 @@
-"""Testes unitários da classificação de leituras recebidas pela Lambda.
-
-Cobre faixas de nível, combinação com chuva simulada e validação de entradas.
-Os testes não acessam serviços AWS nem o banco de dados.
-"""
 import sys
 import unittest
 from pathlib import Path

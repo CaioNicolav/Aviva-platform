@@ -1,10 +1,5 @@
-"""Prepara marcadores geográficos com indicação da origem e da confiabilidade.
-
-O mapa inclui pontos com endereço e coordenadas utilizáveis;
-marcar separadamente aqueles cujos endereços foram conciliados com a camada
-municipal 2026 e aqueles obtidos de CNES/uma fonte municipal histórica 2024.
-NUNCA inferir existência atual, vaga, especialidade ou funcionamento com base
-em coordenadas. Endereços sem coordenadas utilizáveis permanecem na LISTA.
+"""AVIVA | Preparação dos pontos do mapa de serviços de reabilitação.
+Distingue posições verificadas de dados históricos e coordenadas não confirmadas.
 """
 import csv
 import json
@@ -102,8 +97,6 @@ def _descricao_pin(r, a, ref):
                 origem = 'prefeitura_2024_referencia_historica'
                 fonte = 'Prefeitura de São Paulo, referência histórica de 2024 (não atualizada)'
         elif ref.get('correspondencia_2024') == 'COMPATIVEL_2024_RUA_NUMERO_CEP':
-            # Preservamos a coordenada CNES. Correspondência histórica pode ser
-            # descrita no aviso mas NÃO concede status geográfico verificado atual.
             origem = 'cnes_com_correspondencia_historica_2024'
     if verificado and origem != 'prefeitura_2026_endereco_compativel':
         verificado = False

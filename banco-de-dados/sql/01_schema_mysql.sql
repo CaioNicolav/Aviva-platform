@@ -1,5 +1,5 @@
--- AVIVA | Modelo relacional de referência para MySQL 8.0+
--- Estrutura demonstrativa, separada do banco operacional do site; sem prontuários ou identificação de usuários.
+-- AVIVA | Esquema MySQL de referência para dados territoriais, saúde e sensores.
+-- Base demonstrativa sem dados de pacientes; não é o banco operacional do site.
 CREATE DATABASE IF NOT EXISTS aviva_gs_2026 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE aviva_gs_2026;
 SET NAMES utf8mb4;
@@ -85,7 +85,6 @@ CREATE TABLE IF NOT EXISTS estabelecimento_modalidade (
  CONSTRAINT fk_em_mod FOREIGN KEY(id_modalidade) REFERENCES modalidade_reabilitacao(id_modalidade),
  CONSTRAINT fk_em_fonte FOREIGN KEY(id_fonte_comprovacao) REFERENCES fonte_dado(id_fonte)
 ) ENGINE=InnoDB;
--- A tabela ponte está vazia de propósito: nome/CNES isolados não comprovam habilitação em modalidade.
 
 CREATE TABLE IF NOT EXISTS estacao_meteorologica (
  codigo_estacao VARCHAR(20) PRIMARY KEY,
@@ -122,7 +121,6 @@ CREATE TABLE IF NOT EXISTS clima_diario (
  UNIQUE KEY uq_clima_estacao_data(codigo_estacao,data_observacao),
  CONSTRAINT fk_clima_estacao FOREIGN KEY(codigo_estacao) REFERENCES estacao_meteorologica(codigo_estacao)
 ) ENGINE=InnoDB;
--- chuva_amanha_alvo_historico_mm é alvo tabular do dataset, NÃO previsão ao vivo.
 
 CREATE TABLE IF NOT EXISTS evento_comunitario (
  id_evento CHAR(36) PRIMARY KEY,
@@ -135,7 +133,6 @@ CREATE TABLE IF NOT EXISTS evento_comunitario (
  CONSTRAINT fk_evento_fonte FOREIGN KEY(id_fonte) REFERENCES fonte_dado(id_fonte),
  INDEX idx_evento_distrito_hora(distrito_codigo,data_hora)
 ) ENGINE=InnoDB;
--- Os eventos comunitários desta base são simulados e não correspondem a denúncias reais.
 
 CREATE TABLE IF NOT EXISTS dispositivo_iot (
  id_dispositivo VARCHAR(50) PRIMARY KEY,
@@ -159,7 +156,6 @@ CREATE TABLE IF NOT EXISTS leitura_iot (
  CONSTRAINT fk_leitura_dispositivo FOREIGN KEY(id_dispositivo) REFERENCES dispositivo_iot(id_dispositivo),
  INDEX idx_leitura_hora(id_dispositivo,data_hora)
 ) ENGINE=InnoDB;
--- As três leituras inseridas são dados de exemplo, não capturas reais do sensor.
 
 CREATE TABLE IF NOT EXISTS alerta_iot (
  id_alerta BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -170,7 +166,6 @@ CREATE TABLE IF NOT EXISTS alerta_iot (
  CONSTRAINT fk_alerta_leitura FOREIGN KEY(id_leitura) REFERENCES leitura_iot(id_leitura)
 ) ENGINE=InnoDB;
 
--- Interfaces de leitura para futura API. Não implicam integração com AVIVA em produção.
 CREATE OR REPLACE VIEW vw_servicos_mapa AS
 SELECT e.cnes,e.nome,e.id_categoria,e.endereco_cnes,e.bairro_cnes,
        COALESCE(v.latitude_pin_verificado,e.latitude_cnes) AS latitude_exibicao,

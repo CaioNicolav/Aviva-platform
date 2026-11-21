@@ -1,5 +1,5 @@
--- Modelo relacional de referência para municípios, estabelecimentos e modalidades.
--- Este SQL descreve a estrutura planejada, não o banco utilizado pelo módulo atual.
+-- AVIVA | Modelo conceitual de serviços e estabelecimentos para evolução da base.
+-- O módulo atual não utiliza este esquema SQL diretamente.
 CREATE TABLE municipio (
   codigo_ibge CHAR(7) PRIMARY KEY,
   uf CHAR(2) NOT NULL,

@@ -1,8 +1,4 @@
-"""Verifica a consistência dos arquivos de dados incluídos na distribuição.
-
-Confere quantidades esperadas, unicidade de identificadores, integridade dos
-arquivos CNES comprimidos e presença de cargas SQL. Não consulta o MySQL.
-"""
+"""Auditoria offline da distribuição pública; não executa o MySQL."""
 from pathlib import Path
 import csv
 import gzip

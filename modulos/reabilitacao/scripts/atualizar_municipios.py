@@ -1,10 +1,10 @@
-"""Atualiza nomes de municípios com base em códigos do IBGE.
+"""Opcional: preenche nomes de municípios de um CSV de referência com códigos IBGE.
 
 Com internet: `py -m scripts.atualizar_municipios` usa API pública do IBGE.
 Ou: `py -m scripts.atualizar_municipios municipios.csv` usando CSV de duas colunas
 `codigo_ibge,nome` (7 ou 6 dígitos de código).
 
-A rotina trabalha no CSV local e preserva o ZIP original do CNES.
+Fazer cópia local, não sobrescreve o ZIP CNES de origem.
 """
 import csv
 import json
