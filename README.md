@@ -1,5 +1,9 @@
 # AVIVA — Inteligência para comunidades e acesso a serviços
 
+[![Testes automatizados](https://github.com/CaioNicolav/Aviva-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/CaioNicolav/Aviva-platform/actions/workflows/ci.yml)
+
+![AVIVA — comunidade e acesso a serviços](site/assets/comunidade-aquarela.webp)
+
 **Plataforma web de informação territorial, apoio comunitário e orientação sobre serviços de saúde e reabilitação.** O AVIVA reúne interfaces responsivas, APIs em Python, tratamento de dados públicos, análise de eventos e um pipeline em nuvem para ingestão de medições IoT simuladas.
 
 **Desenvolvimento:** Caio Nicolav e Leonardo da Silva  
