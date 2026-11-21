@@ -1,8 +1,8 @@
-"""Registros candidatos encontrados por nome no CNES.
+"""Pesquisa exploratória de estabelecimentos e categorias em registros do CNES.
 
-ATENÇÃO: não comprova habilitação, modalidade, atendimento ativo ou disponibilidade
-pela rede pública. `ambulatorial_sus_informado` reproduz um campo do JSON,
-não significa atendimento da modalidade indicada.
+A identificação por nome ou categoria não comprova habilitação profissional,
+modalidade de reabilitação, funcionamento ou disponibilidade de vagas.
+O campo ambulatorial_sus_informado reproduz apenas um dado cadastral.
 """
 import csv
 import re

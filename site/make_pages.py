@@ -1,3 +1,8 @@
+"""Gera as páginas institucionais estáticas do portal AVIVA.
+
+Centraliza os componentes visuais, os ícones SVG e a estrutura compartilhada
+de navegação antes de gravar o HTML das páginas em site/.
+"""
 from pathlib import Path
 import html
 ROOT=Path(__file__).resolve().parent
@@ -24,6 +29,7 @@ icons={
  'wheel':'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="m12 10-4-5m4 9 5 5"/>',
  'mail':'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/>'
 }
+# Produz ícones SVG a partir do catálogo de formas compartilhado.
 def icon(name,css=''):
  return f'<svg class="icon {css}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{icons[name]}</svg>'
 
@@ -35,6 +41,7 @@ def card(iconname,eyebrow,title,desc,href,chip=None):
  <span class="card-bottom">{f'<span class="chip">{chip}</span>' if chip else ''}<span class="card-arrow">{icon('arrow')}</span></span>
  </a>'''
 
+# Monta o documento completo com metadados, navegação e conteúdo da página.
 def base(title, active, body, description):
  nav=lambda t, path: f'<a href="{path}" class="nav-item {"active" if t == active else ""}" {"aria-current=page" if t == active else ""}>{t}</a>'
  return f'''<!DOCTYPE html><html lang="pt-BR"><head>

@@ -1,4 +1,7 @@
-"""Classe principal de avaliacao e historico."""
+"""Coordena a validação, classificação e apresentação lógica do monitor.
+
+MonitorRisco mantém o histórico da sessão e devolve uma estrutura
+com leituras, classificação, recomendações e eventuais erros."""
 
 from aviva.classificacao import classificar
 from aviva.config import LIMITES, NIVEIS, RECOMENDACOES

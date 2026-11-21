@@ -1,3 +1,5 @@
+/* Painel Comunidade: séries climáticas, simulação de risco e navegação por distritos.
+   Os dados locais e serviços exploratórios são apresentados sem afirmar alertas reais. */
 "use strict";
 
 const chartSvgNamespace = "http://www.w3.org/2000/svg";
@@ -115,6 +117,7 @@ function mostrarErroDoGrafico(mensagem) {
   elements.chart.append(texto);
 }
 
+// Desenha a série selecionada em SVG a partir das observações da estação.
 function desenharGrafico(estacao) {
   if (!estacao || !Array.isArray(estacao.serie) || estacao.serie.length === 0) {
     mostrarErroDoGrafico("Sem observações disponíveis para esta estação.");
@@ -246,6 +249,7 @@ function renderizarBotoesEstacao() {
   });
 }
 
+// Carrega o histórico climático usado pelos indicadores e pelo gráfico.
 async function carregarClima() {
   elements.sourceName.textContent = "CARREGANDO DADOS · INMET";
   try {
@@ -335,6 +339,7 @@ function renderizarResultado(resultado) {
   elements.resultWarning.textContent = resultado.aviso;
 }
 
+// Envia a leitura informada para classificação experimental pelo monitor.
 async function avaliarSimulacao(evento) {
   evento.preventDefault();
   elements.formError.hidden = true;
@@ -411,6 +416,7 @@ async function carregarDistritos() {
   }
 }
 
+// Atualiza o mapa exploratório com os serviços associados ao distrito.
 function atualizarMapa(servicos) {
   const { bbox, centro } = servicos;
   const urlMapa = new URL(

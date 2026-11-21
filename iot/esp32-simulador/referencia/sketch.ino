@@ -1,11 +1,11 @@
 /*
- AVIVA | Global Solution | Monitoramento de enchentes - MVP IoT
+ AVIVA | Referência Arduino do monitoramento experimental com ESP32
  Cenario SIMULADO: HC-SR04 mede distancia ate uma superficie, DHT22 mede
  umidade relativa, e potenciometro representa o sinal analogico de
  um futuro sensor/pluviometro de chuva (nao e medicao real de chuva).
  Nao faz previsao oficial, nao envia alertas reais e nao substitui a Defesa Civil.
 
- Criterios provisórios - mesmos limites de modulos/comunidade/aviva/config.py:
+ Limiares experimentais equivalentes aos de modulos/comunidade/aviva/config.py:
  nivel_agua_cm: ATENCAO >=120, CRITICO >=200 (faixa 0-300)
  chuva_mm_h: ATENCAO >=25, CRITICO >=50 (faixa simulada 0-200)
  Se AMBOS >= ATENCAO => CRITICO combinado.
@@ -40,7 +40,7 @@ const char* rotuloNivel(Nivel n) {
 }
 
 Nivel classificarEvento(float nivelAguaCm, float chuvaMmH) {
-  // Mesma logica do Python: maior nivel entre duas variaveis;
+  // Aplica a maior severidade identificada entre nível d'água e chuva;
   // combinacao de duas condicoes de ATENCAO sobe para CRITICO.
   bool aguaCritica = nivelAguaCm >= 200.0f;
   bool chuvaCritica = chuvaMmH >= 50.0f;

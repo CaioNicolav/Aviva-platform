@@ -1,4 +1,6 @@
-"""Testes do painel web local do AVIVA."""
+"""Verifica o servidor HTTP local e os endpoints do painel Comunidade.
+
+Inclui respostas da API, dados territoriais e comportamento de consultas externas."""
 
 import csv
 import json

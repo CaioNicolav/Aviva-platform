@@ -1,3 +1,5 @@
+/* Interações leves do site institucional: menu responsivo e elementos de navegação.
+   A lógica dos módulos permanece isolada em suas próprias aplicações. */
 (()=>{
  'use strict';
  const menuButton=document.querySelector('.menu-toggle');

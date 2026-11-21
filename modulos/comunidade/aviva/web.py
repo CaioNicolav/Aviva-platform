@@ -1,4 +1,8 @@
-"""Servidor web local do painel AVIVA."""
+"""Atende as rotas HTTP locais do painel Comunidade e seus arquivos estáticos.
+
+Lê séries climáticas e distritos dos arquivos locais, disponibiliza dados
+para o front-end e consulta OpenStreetMap para serviços e localidades.
+As consultas externas são exploratórias e não comprovam atendimento."""
 
 import argparse
 import csv

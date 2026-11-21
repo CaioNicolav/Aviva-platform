@@ -1,4 +1,7 @@
-"""Leitura e agregação do clima do INMET para duas estações reais."""
+"""Normaliza dados horários do INMET e agrega séries diárias por estação.
+
+Preserva valores ausentes, considera o fuso de São Paulo e mantém
+metadados de origem para a leitura das séries históricas."""
 
 from __future__ import annotations
 

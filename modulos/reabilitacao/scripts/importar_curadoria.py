@@ -1,6 +1,8 @@
-"""Valida e importa uma planilha CSV previamente conferida contra fontes oficiais.
+"""Valida e importa um CSV de estabelecimentos revisados na curadoria.
+
+Confere a estrutura e os campos exigidos antes da substituição da base local.
+Não consulta o CNES em tempo real nem presume habilitações de reabilitação.
 Uso: python -m scripts.importar_curadoria /caminho/arquivo.csv
-NÃO consulta a API do CNES nem presume habilitações de reabilitação.
 """
 import csv
 import shutil

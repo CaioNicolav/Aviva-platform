@@ -1,4 +1,4 @@
-"""Zoneamento exploratório da cidade de São Paulo baseado em rótulos de bairro do CNES.
+"""Classificação territorial aproximada de São Paulo a partir dos bairros cadastrados no CNES.
 
 ATENÇÃO:
 - Zonas (Norte/Sul/Leste/Oeste/Centro) podem ser definidas oficialmente por
@@ -8,7 +8,7 @@ ATENÇÃO:
   amplamente identificável, de maneira conservadora; casos não mapeados são
   marcados 'nao_identificada'.
 - Não usar esse campo como comprovante de endereço ou delimitação oficial.
-- Evolução: cruzar coordenadas do CNES com polígonos distritais GeoSampa.
+- Para maior precisão, cruzar coordenadas do CNES com polígonos distritais GeoSampa.
 """
 from .service import normalize
 

@@ -1,4 +1,5 @@
-/* AVIVA v1.3: identidade compartilhada, sem alterar a lógica do mapa/CNES */
+/* Identidade visual AVIVA aplicada ao módulo de reabilitação.
+   Sobrescreve estilos de apresentação sem interferir na busca ou nos dados CNES. */
 :root{--navy:#064532;--dark:#123f31;--muted:#60756b;--teal:#136e50;--mint:#e9f5df;--lav:#f0f6e7;--peach:#fff2e7;--bg:#fff;--line:#deeadb;--white:#fff;
  font-family:Poppins,system-ui,Arial,sans-serif}
 body{font-family:Poppins,system-ui,Arial,sans-serif;background:white;color:var(--dark)}

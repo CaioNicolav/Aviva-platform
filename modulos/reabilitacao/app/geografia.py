@@ -1,6 +1,6 @@
-"""AVIVA — mapa com pins auditáveis e alertas explícitos de incerteza.
+"""Prepara marcadores geográficos com indicação da origem e da confiabilidade.
 
-Política: exibir no mapa pontos com endereço E coordenadas geográficas utilizáveis;
+O mapa inclui pontos com endereço e coordenadas utilizáveis;
 marcar separadamente aqueles cujos endereços foram conciliados com a camada
 municipal 2026 e aqueles obtidos de CNES/uma fonte municipal histórica 2024.
 NUNCA inferir existência atual, vaga, especialidade ou funcionamento com base

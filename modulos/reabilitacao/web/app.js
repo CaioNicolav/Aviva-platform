@@ -1,3 +1,5 @@
+/* Interface de reabilitação: pesquisa, filtros, mapa e consulta por proximidade.
+   Pontos cadastrados não equivalem à confirmação de disponibilidade de serviços. */
 (function () {
   'use strict';
   const $ = (id) => document.getElementById(id);
@@ -131,7 +133,8 @@
     }
     return params;
   }
-  function drawFallback(items) {
+  // Exibe uma representação geográfica aproximada se o mapa-base não carregar.
+function drawFallback(items) {
     // Visualização geográfica offline: marcadores com projeção equiretangular,
     // SEM ruas e SEM limites administrativos. Serve de contingência ao mapa-base.
     const node = $('map');
@@ -207,7 +210,8 @@
     renderMapPoints(visibleMapPoints, false);
     return true;
   }
-  function popupContent(item) {
+  // Constrói o conteúdo textual do marcador sem interpretar HTML de dados externos.
+function popupContent(item) {
     const popup = el('div', 'map-popup');
     popup.append(el('strong', '', item.nome));
     popup.append(el('span', item.pin_validado ? 'map-valid-status' : 'map-pending-status', item.pin_validado ? 'Endereço cruzado com Prefeitura (2026)' : 'Atenção · localização não confirmada'));
@@ -233,7 +237,8 @@
     if (!item.pin_validado) tip.append(el('span', '', item.aviso_validacao));
     return tip;
   }
-  function renderMapPoints(items, shouldFit=true) {
+  // Sincroniza os marcadores visíveis com os filtros aplicados na pesquisa.
+function renderMapPoints(items, shouldFit=true) {
     visibleMapPoints = items;
     if (fallbackMap) {drawFallback(items);return;}
     if (!map || !markers) return;
@@ -297,7 +302,8 @@
       mapStatus.textContent = 'Não foi possível obter os pins agora. A lista pode continuar disponível.';
     }
   }
-  async function pesquisar(page=1) {
+  // Consulta a API paginada e atualiza lista, estado de navegação e mapa.
+async function pesquisar(page=1) {
     const seq = ++latestSearchRequest;
     currentPage = page;
     nearestPanel.hidden = true;
@@ -358,7 +364,8 @@
     const h=Math.sin(dLat/2)**2 + Math.cos(a*rad)*Math.cos(c*rad)*Math.sin(dLon/2)**2;
     return 2*R*Math.asin(Math.min(1,Math.sqrt(h)));
   }
-  async function findNearest() {
+  // Calcula distâncias aproximadas a partir da localização fornecida pelo navegador.
+async function findNearest() {
     if (!selectedOrigin) {
       locationMessage.textContent = 'Primeiro clique em “Usar minha localização” ou “Marcar minha casa no mapa”.';
       return;

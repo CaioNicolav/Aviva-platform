@@ -1,4 +1,6 @@
-"""Testes das regras de classificacao."""
+"""Confere as fronteiras dos limiares e a combinação de riscos.
+
+As parametrizações cobrem as passagens entre normal, atenção e crítico."""
 
 import pytest
 

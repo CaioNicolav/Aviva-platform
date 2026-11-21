@@ -1,4 +1,7 @@
-"""Interface interativa e modo de demonstracao."""
+"""Disponibiliza a interface de terminal do monitor AVIVA.
+
+O fluxo interativo coleta leituras, executa a avaliação e permite
+consultar os resultados durante a sessão."""
 
 import sys
 

@@ -1,3 +1,7 @@
+"""Verifica a separação entre oficinas documentadas e candidatos encontrados por nome.
+
+Os casos cobrem os contratos observáveis da API e dos dados de referência.
+"""
 from fastapi.testclient import TestClient
 from app.main import app
 from app.cnes_exploratorio import load_candidates, load_documented_offices

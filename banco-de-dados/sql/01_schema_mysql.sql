@@ -1,5 +1,5 @@
--- AVIVA Global Solution 2026.2 | MySQL 8.0+ | ESQUEMA ACADÊMICO
--- Não contém dados de pacientes nem identifica usuários. Não é o banco ativo do site.
+-- AVIVA | Modelo relacional de referência para MySQL 8.0+
+-- Estrutura demonstrativa, separada do banco operacional do site; sem prontuários ou identificação de usuários.
 CREATE DATABASE IF NOT EXISTS aviva_gs_2026 CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE aviva_gs_2026;
 SET NAMES utf8mb4;
@@ -135,7 +135,7 @@ CREATE TABLE IF NOT EXISTS evento_comunitario (
  CONSTRAINT fk_evento_fonte FOREIGN KEY(id_fonte) REFERENCES fonte_dado(id_fonte),
  INDEX idx_evento_distrito_hora(distrito_codigo,data_hora)
 ) ENGINE=InnoDB;
--- Todos os eventos carregados nesta entrega são SIMULADOS (não são denúncias reais).
+-- Os eventos comunitários desta base são simulados e não correspondem a denúncias reais.
 
 CREATE TABLE IF NOT EXISTS dispositivo_iot (
  id_dispositivo VARCHAR(50) PRIMARY KEY,
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS leitura_iot (
  CONSTRAINT fk_leitura_dispositivo FOREIGN KEY(id_dispositivo) REFERENCES dispositivo_iot(id_dispositivo),
  INDEX idx_leitura_hora(id_dispositivo,data_hora)
 ) ENGINE=InnoDB;
--- As 3 leituras inseridas são EXEMPLOS DIDÁTICOS, não registros reais capturados do Wokwi.
+-- As três leituras inseridas são dados de exemplo, não capturas reais do sensor.
 
 CREATE TABLE IF NOT EXISTS alerta_iot (
  id_alerta BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,

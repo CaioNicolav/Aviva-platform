@@ -1,3 +1,7 @@
+"""Valida a abrangência da auditoria territorial e seus resultados consolidados.
+
+Os casos cobrem os contratos observáveis da API e dos dados de referência.
+"""
 import csv,json
 from pathlib import Path
 from fastapi.testclient import TestClient

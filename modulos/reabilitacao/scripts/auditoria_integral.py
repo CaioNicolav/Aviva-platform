@@ -1,7 +1,7 @@
-"""AVIVA: auditoria REPRODUZÍVEL de TODOS os cadastros da capital.
+"""Auditoria reproduzível dos cadastros de estabelecimentos em São Paulo.
 
 Sem camada independente não existe validação individual dos endereços. Este
-script gera triagem completa; a confirmação cartográfica exige --referencia.
+script realiza a triagem; o cruzamento cartográfico requer --referencia.
 
 Exemplos:
   py -m scripts.auditoria_integral
@@ -240,7 +240,7 @@ def main(argv=None):
     p.add_argument('--referencia',help='Arquivo oficial de pontos: CSV, GeoJSON, KML ou KMZ')
     p.add_argument('--fonte-url',help='URL do órgão que publicou a referência (para trilha de auditoria)')
     args=p.parse_args(argv)
-    # A importação de KML/KMZ genérico não extrai todos os campos HTML do
+    # A leitura genérica de KML/KMZ não extrai todos os campos HTML do
     # KMZ municipal e não efetua a comparação de CEP/número exigida na v10.
     # Para não destruir os resultados reconciliados, abortar o comando legado.
     if args.referencia and args.referencia.lower().endswith(('.kmz','.kml')):

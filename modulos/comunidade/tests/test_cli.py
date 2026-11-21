@@ -1,4 +1,6 @@
-"""Testes da saida de demonstracao."""
+"""Verifica a saída textual reproduzível do modo de demonstração.
+
+A execução em subprocesso compara o relatório impresso com cenários conhecidos."""
 
 import subprocess
 import sys

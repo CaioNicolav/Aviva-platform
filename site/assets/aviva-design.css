@@ -1,5 +1,5 @@
-/* AVIVA 1.3 — design system unificado | Poppins, verde, branco e laranja suave
-   Sobrepõe somente a apresentação. Links, APIs e filtros são preservados. */
+/* Camada visual compartilhada do AVIVA: tipografia Poppins e paleta institucional.
+   Complementa os estilos básicos sem modificar links, APIs ou filtros. */
 :root{
   --green:#064532;--green2:#1d6b4b;--green-deep:#063c2d;
   --orange:#ee965a;--orange-strong:#db723c;

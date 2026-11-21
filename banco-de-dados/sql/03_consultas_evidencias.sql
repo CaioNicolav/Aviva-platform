@@ -1,4 +1,4 @@
--- AVIVA GS | Consultas de evidencias para o MySQL Workbench
+-- AVIVA | Consultas para verificar volumes, classificações e integridade do banco MySQL.
 USE aviva_gs_2026;
 -- 1. Contagem por modulo e tipo de dado
 SELECT 'saude_estabelecimentos' AS tabela, COUNT(*) AS total FROM estabelecimento_saude
@@ -15,7 +15,7 @@ JOIN validacao_localizacao v ON v.cnes=e.cnes GROUP BY e.id_categoria,v.posicao_
 -- 4. Unidades por bairro + status geografico
 SELECT cnes,nome,id_categoria,bairro_cnes,selo_mapa,aviso FROM vw_servicos_mapa
 WHERE id_categoria IN ('UBS','CAPS','CER','OFICINA') LIMIT 30;
--- 5. CNES da UBS Boracea (o ponto auditado em vez da coordenada CNES)
+-- 5. Compara a coordenada CNES da UBS Boracea com o ponto auditado.
 SELECT e.cnes,e.nome,e.latitude_cnes,e.longitude_cnes,v.latitude_pin_verificado,v.longitude_pin_verificado
 FROM estabelecimento_saude e JOIN validacao_localizacao v ON v.cnes=e.cnes WHERE e.cnes='6048633';
 -- 6. Série histórica de chuva, NÃO previsão de enchente

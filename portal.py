@@ -1,8 +1,8 @@
-"""AVIVA integrado - mesmo endereço para Comunidade e Saude/Reabilitacao.
+"""Ponto de entrada unificado para o portal AVIVA e os módulos internos.
 
-Preserva as duas implementacoes; roteia o site comunitario para um servidor
-interno local e encaminha as rotas de reabilitacao para sua aplicacao FastAPI.
-NÃO e deploy de producao. Usar dados demonstrativos, sem dados sensiveis.
+Encaminha o painel Comunidade a um servidor HTTP local e integra as rotas
+de reabilitação da aplicação FastAPI em um único endereço de navegação.
+Execução local de referência, sem infraestrutura de produção nem dados sensíveis.
 """
 from __future__ import annotations
 import argparse
@@ -28,6 +28,7 @@ from aviva.web import ServidorAviva  # noqa: E402
 from app.main import app as health_app  # noqa: E402
 
 
+# O aplicativo ASGI distribui requisições entre páginas, arquivos e módulos.
 class PortalAVIVA:
     def __init__(self, community_port: int):
         self.community_url = f'http://127.0.0.1:{community_port}'

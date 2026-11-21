@@ -1,7 +1,8 @@
-"""Configuracao provisoria do monitor."""
+"""Centraliza parâmetros do monitor de risco comunitário.
 
-# Cenario, variaveis e limites sao provisórios e dependem do PDF oficial de
-# IoT/AICSS. Nao representam criterios confirmados nem leituras de sensores.
+As faixas de nível e chuva são experimentais e servem para simulação.
+Não representam critérios oficiais nem medições de sensores reais."""
+
 LIMITES = {
     "nivel_agua_cm": {
         "rotulo": "Nível da água",

@@ -1,5 +1,6 @@
--- AVIVA | Correção da trigger existente para preencher data obrigatória do alerta.
--- Execute apenas uma vez, na conexão AVIVA - Banco Local.
+-- Trigger de alerta crítico associada à inserção de uma leitura IoT.
+-- O campo gerado_em registra a criação do alerta; o script recria a trigger.
+-- Limiar experimental de 200 cm: não representa alerta oficial de Defesa Civil.
 USE aviva_gs_2026;
 
 DROP TRIGGER IF EXISTS trg_alerta_critico;

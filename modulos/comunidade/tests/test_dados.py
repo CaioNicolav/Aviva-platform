@@ -1,4 +1,6 @@
-"""Testes de geração e montagem dos dados da Fase 1."""
+"""Valida a preparação dos dados e a separação entre fontes reais e simuladas.
+
+Confere agregações, formatos e restrições usadas no conjunto de testes."""
 
 import csv
 import uuid

@@ -1,4 +1,7 @@
-"""Testes de integração das UBS da capital, preservando serviços anteriores."""
+"""Confere a integração cadastral das UBS da capital e a origem das informações.
+
+Os casos cobrem os contratos observáveis da API e dos dados de referência.
+"""
 from fastapi.testclient import TestClient
 from app.main import app
 from app.cnes_exploratorio import load_ubs_sp, registros_consulta

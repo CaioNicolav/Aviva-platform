@@ -1,3 +1,7 @@
+"""Testa o zoneamento aproximado e os filtros por bairro e categoria na capital.
+
+Os casos cobrem os contratos observáveis da API e dos dados de referência.
+"""
 from fastapi.testclient import TestClient
 from app.main import app
 from app.cnes_exploratorio import search_candidates, bairros_disponiveis_sp

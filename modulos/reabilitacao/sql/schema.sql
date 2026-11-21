@@ -1,4 +1,5 @@
--- Esquema conceitual para evolução do AVIVA. Não executado pelo MVP atual.
+-- Modelo relacional de referência para municípios, estabelecimentos e modalidades.
+-- Este SQL descreve a estrutura planejada, não o banco utilizado pelo módulo atual.
 CREATE TABLE municipio (
   codigo_ibge CHAR(7) PRIMARY KEY,
   uf CHAR(2) NOT NULL,

@@ -1,4 +1,8 @@
-"""Busca apenas registros curados e conferidos de serviços públicos de reabilitação."""
+"""Consulta registros curados de serviços públicos de reabilitação.
+
+Normaliza termos de pesquisa e filtra serviços por localidade e modalidade.
+As informações retornadas dependem da data de referência e da fonte cadastrada.
+"""
 import csv
 import re
 import unicodedata

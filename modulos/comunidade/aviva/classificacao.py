@@ -1,4 +1,7 @@
-"""Regras provisorias de classificacao."""
+"""Classifica leituras do monitor pelos limiares de atenção e criticidade.
+
+A categoria final usa o maior nível individual; duas variáveis em atenção
+elevam o resultado combinado a crítico. Os limites são experimentais."""
 
 from aviva.config import LIMITES, NIVEIS
 

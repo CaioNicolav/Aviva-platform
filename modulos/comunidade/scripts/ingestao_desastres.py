@@ -1,4 +1,7 @@
-"""Valida a presença do arquivo original do Atlas Digital de Desastres."""
+"""Reserva a etapa de ingestão do Atlas Digital de Desastres.
+
+Valida a presença do arquivo de origem; a leitura de seu formato ainda não
+está implementada e não produz dados artificiais."""
 
 from pathlib import Path
 

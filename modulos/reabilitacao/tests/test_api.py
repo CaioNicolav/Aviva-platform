@@ -1,3 +1,7 @@
+"""Testa rotas HTTP básicas do módulo de reabilitação e funções de busca.
+
+Os casos cobrem os contratos observáveis da API e dos dados de referência.
+"""
 from fastapi.testclient import TestClient
 from app.main import app
 from app.service import normalize, search_services

@@ -1,4 +1,7 @@
-"""Junta arquivos semanais normalizados sem substituir fontes ausentes."""
+"""Consolida fontes normalizadas em tabelas de análise do módulo Comunidade.
+
+Identifica fontes indisponíveis sem inventar valores e separa dados
+públicos de eventos simulados ao compor agregações por período."""
 
 import argparse
 import csv

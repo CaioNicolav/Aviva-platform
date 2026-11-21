@@ -1,3 +1,5 @@
+/* Cache de recursos estáticos do portal para navegação com conectividade limitada.
+   A lista de URLs e a versão do cache determinam quais arquivos são preservados. */
 const CACHE='aviva-unificado-v13';const staticPaths=['/','/auxilios/','/sobre/','/login/','/assets/site.css','/assets/aviva-design.css','/assets/site.js','/assets/aviva-symbol.png','/assets/comunidade-aquarela.webp'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(staticPaths)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});

@@ -1,11 +1,9 @@
-"""Auditoria geográfica exploratória de pontos da capital paulista.
+"""Avalia a consistência geográfica de registros CNES em São Paulo.
 
-APLICAÇÃO:
-- Corrige erros pontuais com origem/referência explícita.
-- Rejeita COORDENADAS com discrepância extrema em relação ao agrupamento
-  de cadastros do mesmo bairro (heurística, não atestado de precisão).
-- Preserva dados brutos do CNES sem sobrescrever a fonte original.
-NÃO ESTÁ GARANTIDO que os demais pins representam a posição exata.
+Preserva a fonte original, considera correções pontuais documentadas e
+sinaliza coordenadas discrepantes em relação a registros do mesmo bairro.
+A análise é heurística: pontos sem verificação independente não devem ser
+interpretados como endereços confirmados.
 """
 from functools import lru_cache
 from math import isfinite, radians, sin, cos, asin, sqrt

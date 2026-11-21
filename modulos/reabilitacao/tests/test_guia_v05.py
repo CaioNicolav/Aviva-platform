@@ -1,3 +1,7 @@
+"""Verifica a estrutura do guia e a exposição das informações de serviços.
+
+Os casos cobrem os contratos observáveis da API e dos dados de referência.
+"""
 from fastapi.testclient import TestClient
 from app.main import app
 
