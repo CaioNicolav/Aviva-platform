@@ -1,0 +1,54 @@
+/* AVIVA v1.3: identidade compartilhada, sem alterar a lógica do mapa/CNES */
+:root{--navy:#064532;--dark:#123f31;--muted:#60756b;--teal:#136e50;--mint:#e9f5df;--lav:#f0f6e7;--peach:#fff2e7;--bg:#fff;--line:#deeadb;--white:#fff;
+ font-family:Poppins,system-ui,Arial,sans-serif}
+body{font-family:Poppins,system-ui,Arial,sans-serif;background:white;color:var(--dark)}
+.sidebar{background:#073e2f;color:#eff5eb;border-radius:0 22px 22px 0}
+.sidebar .brand-mark{background:#dcefc0;color:#0f6640;border-radius:14px}
+.brand strong{font-weight:800;letter-spacing:-.045em}
+.brand small{color:#c0d9c0}
+.nav-label{color:#b1cfbb}.sidebar .nav-link{color:#d1e6d3}
+.sidebar .nav-link.current,.sidebar .nav-link:hover{background:#1c604a;color:white}
+.sidebar-card{background:#14533e;border-color:#38745a}.sidebar-bottom small{color:#c6e2ce}
+.aviva-back-link{border-color:#63977b;color:#e0f3dc}
+.main{background:#fff}
+.aviva-ecosystem-nav{position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 20px;padding:12px 0;border-bottom:1px solid #e2ecdd;font-family:Poppins,Arial,sans-serif}
+.aviva-ecosystem-brand{display:flex;align-items:center;gap:11px;color:#064532;font-size:16px;font-weight:800;letter-spacing:-.03em}
+.aviva-ecosystem-brand small{font-size:10px;color:#7a907b;font-weight:500;letter-spacing:0}
+.aviva-ecosystem-nav>div{display:flex;align-items:center;gap:20px}
+.aviva-ecosystem-nav>div a{font-size:11px;color:#355f48;font-weight:600}
+.aviva-ecosystem-nav>div a[aria-current]{color:#d47437}
+.aviva-ecosystem-nav .aviva-eco-login{background:#064532;color:white;border-radius:30px;padding:8px 14px}
+.topbar{border-color:#edf1e9}.topbar,.section-top{color:#214b37}
+.hero{background:linear-gradient(115deg,#f4faee,#e8f5e3)!important;border:1px solid #d9ebce!important;border-radius:26px!important}
+.hero h1,.content-section h2,.section-top h2{color:#064532}
+.eyebrow{color:#1a7752}
+.quick-cards>a,.quick-cards>div,.search-panel,.service-explain-card,.care-step,.map-layout,.map-section,.map-wrapper{border-radius:19px}
+.primary-cta,.search-button,.primary-tool,.tool-button.primary-tool,button[type=submit]{background:#137d58;border-radius:12px}
+.search-button:hover,.primary-tool:hover{background:#075e42}
+.content-section{border-color:#e4ecdf}
+.map-panel,.search-panel{border-color:#d8e6d7}.sidebar .brand{margin-bottom:34px}
+.service-explain-card{border:1px solid #dcebd8;background:#f8fcf6}
+.service-kind{color:#187a54}.entry-guidance,.care-final-cta{background:#eaf5df;border-color:#d5e7cc}
+.search-panel input,.search-panel select{border-radius:10px}
+.leaflet-tooltip.aviva-tooltip{border-color:#dfc6a9;font-family:Poppins,Arial,sans-serif}
+footer{color:#708a79}
+@media(max-width:1060px){.aviva-ecosystem-nav{margin-top:5px;flex-wrap:wrap}.aviva-ecosystem-nav>div{flex-wrap:wrap;gap:13px}}
+@media(max-width:680px){.aviva-ecosystem-nav{display:block;padding:14px 0}.aviva-ecosystem-brand{margin-bottom:9px}.aviva-ecosystem-nav>div{gap:11px}.aviva-ecosystem-nav>div a{font-size:10px}.aviva-ecosystem-brand small{display:none}}
+/* Reduce mobile navigation chrome so the actual service finder is visible early */
+@media(max-width:820px){
+ .sidebar{padding:13px 16px 12px;border-radius:0 0 16px 16px}
+ .sidebar .brand{margin:0 0 7px}
+ .sidebar .brand-mark{width:36px;height:36px;font-size:23px}
+ .sidebar .brand strong{font-size:23px}
+ .sidebar .brand small{display:none}
+ .aviva-back-link{display:inline-block;margin:0 0 8px 0;padding:6px 10px;font-size:11px}
+ .sidebar nav{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:5px}
+ .sidebar .nav-link{font-size:11px;padding:7px 10px}
+ .sidebar .nav-icon{font-size:16px;width:17px}
+ .main{padding:0 16px}
+ .aviva-ecosystem-nav{display:flex;align-items:center;flex-wrap:nowrap;padding:9px 0;margin:0 0 12px;gap:8px}
+ .aviva-ecosystem-nav>div{display:flex;gap:9px;flex-wrap:nowrap}
+ .aviva-ecosystem-brand{font-size:13px;margin:0}
+ .aviva-ecosystem-nav>div a{font-size:10px;white-space:nowrap}
+ .aviva-ecosystem-nav .aviva-eco-login{padding:6px 10px}
+}

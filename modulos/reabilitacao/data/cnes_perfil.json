@@ -1,0 +1,20 @@
+{
+  "total_registros_arquivo_cnes": 642608,
+  "candidatos_por_pista_nome": 27779,
+  "candidatos_por_categoria_e_campo_ambulatorial_sus": {
+    "CAPS/SIM": 2039,
+    "CAPS/NAO": 1655,
+    "OUTROS/SIM": 3513,
+    "OUTROS/NAO": 20124,
+    "CER/SIM": 310,
+    "OFICINA/SIM": 22,
+    "CER/NAO": 106,
+    "OFICINA/NAO": 10
+  },
+  "codigos_cnes_duplicados_descartados": 0,
+  "municipios_distintos_com_candidatos": 3643,
+  "sha256_zip_original": "036747dd628706bf725ec903ab1e8e72408f2472bb9176ac9395d9b8078a4b86",
+  "data_arquivo_recebido": "2026-11-16",
+  "data_referencia_cadastro": "Não informada no arquivo JSON; requer verificar na fonte original",
+  "classificacao": "heurística por nomes; não valida atendimento nem modalidade CER"
+}

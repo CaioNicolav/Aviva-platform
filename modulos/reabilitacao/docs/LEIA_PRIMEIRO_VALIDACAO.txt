@@ -1,0 +1,11 @@
+AVIVA 0.10 — VALIDAÇÃO GEOGRÁFICA (SÃO PAULO)
+
+448 UBS: correspondência única por CNES, logradouro, número e CEP com a Prefeitura;
+29 UBS: endereços divergentes, pin retido;
+1 UBS: ponto municipal fora (>100 m) de sua própria área, pin retido;
+9 UBS CNES: não constam da camada municipal; pin retido;
+7 referências municipais não classificadas como UBS no conjunto do AVIVA; não adicionadas automaticamente.
+
+A comparação com os polígonos de 2026 encontrou 479 pontos dentro da própria área e 6 fora. Essas áreas não determinam atendimento ativo nem entrada exata. CAPS, CER e oficinas ortopédicas não foram validados por este conjunto de fontes.
+
+Consulte RELATORIO_CRUZAMENTO_GEOSAMPA_2026_v10.md para método e limitações.

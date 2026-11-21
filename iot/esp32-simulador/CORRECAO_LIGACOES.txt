@@ -1,0 +1,15 @@
+AVIVA IoT - Correcao do Wokwi
+
+Erro anterior: conexoes de GPIO estavam identificadas como esp:5, esp:18 etc.
+Correto para ESP32 DevKit v1: esp:D5, esp:D18, ...
+
+Arquivos de codigo fonte (src/main.cpp), platformio.ini e wokwi.toml permanecem inalterados.
+
+1. Abra a pasta AVIVA_IoT_Enchentes_VSCode_PlatformIO no VS Code (ou esta pasta corrigida).
+2. Substitua apenas diagram.json com o incluido.
+3. Pare o simulador e execute Wokwi: Start Simulator novamente.
+4. Confira que a saída serial deixou de exibir FALHA_SENSOR_NIVEL.
+5. Para simular nivel de agua, clique no HC-SR04 e altere distance (cm). O nivel é 300 menos a distancia.
+6. Ajuste o potenciometro para simular chuva; não é um sensor real de chuva.
+
+ATENCAO: teste academico, nao usar para alertar enchentes reais.

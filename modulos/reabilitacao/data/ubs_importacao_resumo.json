@@ -1,0 +1,22 @@
+{
+  "origem_arquivo": "cnes_estabelecimentos_json.zip (fornecido pelo usuário)",
+  "registros_total_fonte": 642608,
+  "municipio_ibge": "355030",
+  "uf": "SP",
+  "criterios": [
+    "CO_IBGE = 355030 (cidade de São Paulo)",
+    "TP_UNIDADE = 2 (Centro de Saúde/Unidade Básica)",
+    "CO_AMBULATORIAL_SUS = SIM",
+    "Nome contém UBS, UBSI, Unidade Básica de Saúde ou Centro de Saúde (após normalização)"
+  ],
+  "total_ubs_importadas": 487,
+  "cnes_ja_presentes_em_outras_categorias": [],
+  "avisos": [
+    "Classificação cadastral. Não comprova prestação de reabilitação, capacidade, horários, vagas ou situação atual.",
+    "A UBS de referência pode depender do endereço residencial e da organização local da rede.",
+    "Coordenadas são informadas no CNES e podem ter erros.",
+    "A base não foi confrontada com o cadastro territorial da Prefeitura; dados extraídos na data de entrega do ZIP."
+  ],
+  "data_importacao": "2026-11-16",
+  "zip_original_sha256": "036747dd628706bf725ec903ab1e8e72408f2472bb9176ac9395d9b8078a4b86"
+}

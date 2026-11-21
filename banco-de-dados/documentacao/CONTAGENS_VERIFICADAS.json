@@ -1,0 +1,21 @@
+{
+  "saude_estabelecimentos": 2647,
+  "categorias": {
+    "CAPS": 122,
+    "CER": 45,
+    "OFICINA": 2,
+    "OUTROS": 1991,
+    "UBS": 487
+  },
+  "geograficamente_verificados": 448,
+  "areas_ubs_vinculadas": 478,
+  "clima_diario": 604,
+  "estacoes": [
+    "A701",
+    "A771"
+  ],
+  "eventos_simulados": 4000,
+  "leituras_iot_exemplo": 3,
+  "modalidades_clinicas_atribuidas": 0,
+  "fontes": 5
+}

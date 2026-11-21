@@ -1,0 +1,7 @@
+{
+  "id_dispositivo": "AVIVA-ESP32-DEMO",
+  "data_hora": "2026-11-19T18:00:00Z",
+  "nivel_agua_cm": 225,
+  "chuva_simulada_mm_h": 32.4,
+  "umidade_dht22_pct": 87.3
+}

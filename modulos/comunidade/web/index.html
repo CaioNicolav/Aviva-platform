@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#f6f1e7" name="theme-color"/>
+<meta content="AVIVA aproxima moradores, iniciativas comunitárias e dados públicos de São Paulo." name="description"/>
+<title>AVIVA — a comunidade começa perto</title>
+<link href="/aviva-marca.svg" rel="icon" type="image/svg+xml"/>
+<link href="/styles.css" rel="stylesheet"/>
+<script defer="" src="/app.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<nav aria-label="Navegação da plataforma AVIVA" class="aviva-ecosystem-nav">
+<a class="aviva-ecosystem-brand" href="/">AVIVA <small>Comunidade e Território</small></a>
+<div><a href="/">Início</a><a aria-current="page" href="/auxilios/">Auxílios</a><a href="/sobre/">Sobre</a><a class="aviva-eco-login" href="/login/">Login</a></div>
+</nav><a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<header class="topbar">
+<a aria-label="AVIVA, início" class="brand" href="#inicio">
+<img alt="" class="brand-mark" src="/aviva-marca.svg"/>
+<span class="brand-lockup">
+<span class="brand-word">aviva<span>.</span></span>
+<span class="brand-tagline">gente perto, cidade viva</span>
+</span>
+</a>
+<nav aria-label="Navegação principal" class="main-nav">
+<a class="nav-link" href="/">Início AVIVA</a>
+<a class="nav-link is-current" href="#territorio">Meu território</a>
+<a class="nav-link" href="#mural">Mural</a>
+<a class="nav-link" href="#recursos">Serviços</a>
+<a class="nav-link" href="/reabilitacao/">Saúde e reabilitação</a>
+<a class="nav-link" href="#clima">Clima</a>
+<a class="nav-link nav-link-about" href="#sobre">Sobre</a>
+</nav>
+<div class="topbar-note">
+<span aria-hidden="true" class="live-dot"></span>
+<span>PROTÓTIPO ACADÊMICO</span>
+</div>
+</header>
+<main id="conteudo">
+<section aria-labelledby="hero-title" class="hero page-shell" id="inicio">
+<div class="hero-copy">
+<p class="eyebrow eyebrow-light">
+<span class="eyebrow-line"></span>
+            UMA REDE QUE COMEÇA NA SUA RUA
+          </p>
+<h1 id="hero-title">A cidade fica<br/><em>melhor quando é nossa.</em></h1>
+<p class="hero-description">
+            Encontre iniciativas, compartilhe necessidades e cuide do lugar onde
+            você vive. No AVIVA, a conversa começa perto — no seu distrito.
+          </p>
+<div class="hero-actions">
+<a class="button button-lime" href="#territorio">
+              Escolher meu território
+              <span aria-hidden="true">↘</span>
+</a>
+<a class="hero-text-link" href="/reabilitacao/">
+              Encontrar reabilitação pelo SUS <span aria-hidden="true">→</span>
+</a>
+<a class="hero-text-link" href="#recursos">
+              Ver serviços úteis <span aria-hidden="true">→</span>
+</a>
+</div>
+<p class="hero-disclaimer">
+            Sem endereço exato · sem localização GPS · privacidade primeiro
+          </p>
+</div>
+<div aria-hidden="true" class="hero-art">
+<svg class="contour-lines" fill="none" viewbox="0 0 560 460">
+<path d="M598 34C455 5 390 67 355 135c-35 67-84 91-164 66C91 176 8 199-24 275"></path>
+<path d="M603 59C466 29 405 87 370 151c-39 72-91 106-183 80C103 208 22 230-18 310"></path>
+<path d="M609 84C476 53 422 110 385 170c-43 71-99 119-200 94-85-21-163 5-200 82"></path>
+<path d="M615 110c-130-31-177 27-216 84-48 69-107 131-218 106-78-17-151 14-191 88"></path>
+<path d="M620 137c-127-32-166 31-209 86-52 67-116 143-236 118-72-15-139 23-180 92"></path>
+<path d="M626 165c-124-33-157 35-202 88-56 67-125 155-254 132-65-12-126 31-168 96"></path>
+</svg>
+<div class="art-orbit orbit-one"></div>
+<div class="art-orbit orbit-two"></div>
+<div class="art-center">
+<span class="center-kicker">GENTE QUE<br/>SE ENCONTRA</span>
+<img alt="" class="center-symbol" src="/aviva-marca.svg"/>
+<span class="center-caption">CUIDADO EM<br/>COMUNIDADE</span>
+</div>
+<div class="art-coordinate coordinate-top">SP · 96 DISTRITOS<br/>1 CIDADE EM REDE</div>
+<div class="art-coordinate coordinate-bottom">PEDIR · OFERECER<br/>· PARTICIPAR</div>
+<div class="art-node node-top"></div>
+<div class="art-node node-bottom"></div>
+</div>
+<div aria-hidden="true" class="hero-index">AV <span>/</span> 01</div>
+</section>
+<section aria-labelledby="territory-title" class="territory-section page-shell section-block" id="territorio">
+<div class="section-heading">
+<div>
+<p class="eyebrow"><span class="eyebrow-line"></span>01 — COMEÇAR PERTO</p>
+<h2 id="territory-title">Qual é o seu<br/><em>pedaço da cidade?</em></h2>
+</div>
+<p class="section-intro">
+            O AVIVA começa pela cidade de São Paulo. Escolha um distrito oficial
+            e, se souber, informe também o bairro para aproximar a conversa.
+          </p>
+</div>
+<div class="territory-layout">
+<form class="territory-form" id="territory-form">
+<label class="field-label" for="city-select">Cidade</label>
+<select disabled="" id="city-select" name="cidade">
+<option value="3550308">São Paulo — SP</option>
+</select>
+<span class="field-hint">Cobertura atual do protótipo · novas cidades ainda não disponíveis</span>
+<label class="field-label district-label" for="district-select">Distrito de referência</label>
+<span class="field-hint">96 distritos oficiais do município · lista do IBGE</span>
+<select disabled="" id="district-select" name="distrito" required="">
+<option value="">Carregando distritos…</option>
+</select>
+<label class="field-label neighborhood-label" for="neighborhood-input">
+              Bairro <small>opcional · nome local</small>
+</label>
+<span class="field-hint" id="neighborhood-source">Bairros não têm uma lista oficial única em São Paulo. Sugestões do mapa aparecem quando disponíveis; você também pode digitar o nome.</span>
+<input autocomplete="off" id="neighborhood-input" list="neighborhood-options" maxlength="60" name="bairro" placeholder="Ex.: Aclimação" type="text"/>
+<datalist id="neighborhood-options"></datalist>
+<div aria-label="Bairros sugeridos no OpenStreetMap" class="neighborhood-suggestions" hidden="" id="neighborhood-suggestions"></div>
+<button class="button button-forest territory-submit" disabled="" type="submit">
+              Ver minha comunidade <span aria-hidden="true">→</span>
+</button>
+<p class="territory-error" hidden="" id="territory-error" role="alert"></p>
+<p class="territory-privacy">
+              Sua região fica neste navegador. O mapa consulta o distrito no
+              OpenStreetMap; o bairro não é enviado. Sem GPS ou endereço.
+            </p>
+</form>
+<div class="map-card">
+<div class="map-heading">
+<span aria-hidden="true" class="map-pin">⌖</span>
+<div>
+<p class="card-overline">MAPA DA REGIÃO</p>
+<h3 id="map-title">São Paulo, vista de perto</h3>
+</div>
+</div>
+<iframe id="territory-map" loading="lazy" referrerpolicy="no-referrer" src="about:blank" title="Mapa do distrito selecionado com referência do centro"></iframe>
+<div class="map-placeholder" id="map-placeholder">
+<span aria-hidden="true">⌖</span>
+<p>Escolha um distrito para explorar seus serviços e referências.</p>
+<a href="https://www.openstreetmap.org/" id="map-fallback-link" rel="noreferrer" target="_blank">Explorar no OpenStreetMap ↗</a>
+</div>
+<p class="map-attribution">
+              Mapa e limites colaborativos do OpenStreetMap; o marcador indica
+              o centro aproximado do distrito.
+              <a href="https://www.openstreetmap.org/" id="open-map-link" rel="noreferrer" target="_blank">Abrir mapa <span aria-hidden="true">↗</span></a>
+</p>
+</div>
+</div>
+<section aria-labelledby="insights-title" class="territory-insights" hidden="" id="territory-insights">
+<div class="insights-heading">
+<div>
+<p class="eyebrow"><span class="eyebrow-line"></span>GUIA DO TERRITÓRIO</p>
+<h3 id="insights-title">O que existe <em>por aqui.</em></h3>
+</div>
+<p aria-live="polite" class="places-status" id="places-status" role="status">
+              Consultando pontos de referência mapeados…
+            </p>
+</div>
+<div aria-label="Resumo de serviços mapeados" class="territory-stats" id="territory-stats"></div>
+<div class="places-panel">
+<div class="places-toolbar">
+<div>
+<p class="card-overline">PONTOS DE REFERÊNCIA</p>
+<h4 id="places-heading">Serviços e espaços próximos</h4>
+</div>
+<div aria-label="Filtrar pontos por categoria" class="places-filters" id="places-filters" role="group"></div>
+<button class="text-button" hidden="" id="retry-services" type="button">Tentar novamente</button>
+</div>
+<div class="place-list" id="place-list"></div>
+<div class="places-empty" hidden="" id="places-empty">
+<span aria-hidden="true">⌖</span>
+<p>Nenhum local dessa categoria aparece no mapa colaborativo para esta região.</p>
+<a hidden="" href="https://www.openstreetmap.org/" id="places-map-fallback" rel="noreferrer" target="_blank">Buscar este distrito no mapa ↗</a>
+</div>
+</div>
+<p class="places-disclaimer">
+            Dados comunitários do OpenStreetMap, não um cadastro oficial da Prefeitura:
+            cobertura e atualização variam. O mapa não informa se cada unidade é pública
+            ou está aberta; quando a gestão não consta na fonte, isso é indicado.
+            Confirme endereço, funcionamento e atendimento diretamente com o serviço.
+            <a href="https://www.openstreetmap.org/copyright" rel="noreferrer" target="_blank">Créditos e licença ODbL ↗</a>
+</p>
+</section>
+<p class="district-source" id="district-source">Consultando a fonte oficial…</p>
+</section>
+<section aria-labelledby="community-title" class="community-section page-shell section-block" id="mural">
+<div class="section-heading">
+<div>
+<p class="eyebrow"><span class="eyebrow-line"></span>02 — REDE DE VIZINHOS</p>
+<h2 id="community-title">O que está<br/><em>acontecendo por perto.</em></h2>
+</div>
+<div aria-live="polite" class="community-region">
+<span aria-hidden="true" class="community-region-dot"></span>
+<span id="selected-region">Seu distrito</span>
+<button class="text-button" id="change-region" type="button">Trocar região</button>
+</div>
+</div>
+<div class="community-notice" role="note">
+<span aria-hidden="true" class="notice-symbol">i</span>
+<p>
+<strong>Protótipo local, sem comunidade conectada:</strong> nada aqui
+            é publicação de outro morador. Seus exemplos ficam salvos somente
+            neste navegador; não são enviados nem compartilhados. Contas,
+            mensagens privadas e moderação ainda precisam de um serviço seguro.
+            Não publique dados pessoais ou relatos sensíveis.
+          </p>
+</div>
+<p aria-live="polite" class="community-storage-status" id="community-storage-status" role="status">
+          Este espaço demonstra pedidos, ofertas, trocas e ações locais — ainda não conecta moradores.
+        </p>
+<div aria-label="Ideias para participar da comunidade" class="community-actions">
+<button class="community-action action-help" data-post-category="pedido" type="button">
+<span aria-hidden="true" class="community-action-icon">＋</span>
+<span class="community-action-label">Pedir apoio</span>
+<span class="community-action-copy">Ajuda prática entre vizinhos</span>
+</button>
+<button class="community-action action-offer" data-post-category="oferta" type="button">
+<span aria-hidden="true" class="community-action-icon">↗</span>
+<span class="community-action-label">Oferecer ajuda</span>
+<span class="community-action-copy">Tempo, conhecimento ou serviço</span>
+</button>
+<button class="community-action action-exchange" data-post-category="troca" type="button">
+<span aria-hidden="true" class="community-action-icon">⇄</span>
+<span class="community-action-label">Doar ou trocar</span>
+<span class="community-action-copy">Reuso e economia solidária</span>
+</button>
+<button class="community-action action-gather" data-post-category="evento" type="button">
+<span aria-hidden="true" class="community-action-icon">✳</span>
+<span class="community-action-label">Criar um encontro</span>
+<span class="community-action-copy">Mutirões, oficinas e atividades</span>
+</button>
+<button class="community-action action-care" data-post-category="problema" type="button">
+<span aria-hidden="true" class="community-action-icon">⌖</span>
+<span class="community-action-label">Cuidar do bairro</span>
+<span class="community-action-copy">Registrar uma necessidade urbana</span>
+</button>
+</div>
+<div class="community-layout">
+<div class="feed-column">
+<div class="feed-toolbar">
+<div>
+<span class="feed-count" id="feed-count">0</span>
+<span class="feed-count-label">publicações nesta sessão</span>
+</div>
+<label class="filter-label" for="post-filter">Mostrar
+                <select id="post-filter">
+<option value="todas">Tudo</option>
+<option value="pedido">Pedidos</option>
+<option value="oferta">Ofertas</option>
+<option value="troca">Doações e trocas</option>
+<option value="evento">Encontros e mutirões</option>
+<option value="problema">Problemas</option>
+</select>
+</label>
+</div>
+<div aria-live="polite" class="post-list" id="post-list"></div>
+<div class="empty-feed" id="empty-feed">
+<span aria-hidden="true" class="empty-feed-icon">✳</span>
+<h3>A conversa começa com a comunidade.</h3>
+<p>
+                Escolha seu distrito e crie uma publicação de demonstração.
+                Ela ficará somente neste navegador, sem alcançar outros moradores.
+              </p>
+</div>
+</div>
+<aside aria-labelledby="composer-title" class="composer-card">
+<p class="card-overline">COMPARTILHE COM CUIDADO</p>
+<h3 id="composer-title">Uma iniciativa começa com uma conversa.</h3>
+<form id="post-form">
+<label for="post-category">Tipo de publicação</label>
+<select id="post-category" name="categoria" required="">
+<option value="pedido">Preciso de ajuda</option>
+<option value="oferta">Posso ajudar</option>
+<option value="troca">Doação ou troca</option>
+<option value="evento">Encontro ou mutirão</option>
+<option value="problema">Problema no bairro</option>
+</select>
+<label for="post-neighborhood">Bairro <small>do território selecionado</small></label>
+<input id="post-neighborhood" name="bairro" readonly="" type="text"/>
+<label for="post-title">Título</label>
+<input id="post-title" maxlength="80" name="titulo" required="" type="text"/>
+<label for="post-description">Conte o necessário, sem dados pessoais</label>
+<textarea id="post-description" maxlength="500" name="descricao" required="" rows="4"></textarea>
+<p class="composer-warning">
+                Não informe endereço, telefone, nomes de terceiros ou detalhes
+                de violência. Este mural não é monitorado nem canal de emergência.
+              </p>
+<button class="button button-forest" type="submit">Publicar nesta demonstração</button>
+<p class="territory-error" hidden="" id="post-error" role="alert"></p>
+</form>
+</aside>
+</div>
+</section>
+<section aria-labelledby="resources-title" class="resources-section page-shell section-block" id="recursos">
+<div class="section-heading">
+<div>
+<p class="eyebrow"><span class="eyebrow-line"></span>03 — ACESSO A SERVIÇOS</p>
+<h2 id="resources-title">Informação confiável<br/><em>também é cuidado.</em></h2>
+</div>
+<p class="section-intro">
+            Contatos públicos úteis, válidos em todo o Brasil. Em emergências,
+            procure diretamente o serviço responsável.
+          </p>
+</div>
+<div class="service-grid">
+<a class="service-card" href="tel:190">
+<span class="service-number">190</span>
+<span class="service-name">Polícia Militar</span>
+<span class="service-detail">Emergências policiais · serviço público</span>
+<span class="service-link">Ligar <span aria-hidden="true">↗</span></span>
+</a>
+<a class="service-card" href="tel:192">
+<span class="service-number">192</span>
+<span class="service-name">SAMU</span>
+<span class="service-detail">Urgência e emergência em saúde</span>
+<span class="service-link">Ligar <span aria-hidden="true">↗</span></span>
+</a>
+<a class="service-card" href="tel:193">
+<span class="service-number">193</span>
+<span class="service-name">Corpo de Bombeiros</span>
+<span class="service-detail">Incêndios, salvamentos e resgates</span>
+<span class="service-link">Ligar <span aria-hidden="true">↗</span></span>
+</a>
+<a class="service-card" href="tel:199">
+<span class="service-number">199</span>
+<span class="service-name">Defesa Civil</span>
+<span class="service-detail">Riscos e desastres · atendimento nacional</span>
+<span class="service-link">Ligar <span aria-hidden="true">↗</span></span>
+</a>
+<a class="service-card service-card-women" href="tel:180">
+<span class="service-number">180</span>
+<span class="service-name">Central de Atendimento à Mulher</span>
+<span class="service-detail">Orientação e denúncia · atendimento gratuito</span>
+<span class="service-link">Ligar <span aria-hidden="true">↗</span></span>
+</a>
+</div>
+<p class="services-disclaimer">
+          O AVIVA não aciona esses serviços. Se houver perigo imediato, ligue
+          diretamente. O 180 também oferece orientação; em emergência, ligue 190.
+        </p>
+</section>
+<section aria-labelledby="climate-title" class="climate-section page-shell section-block" id="clima">
+<div class="section-heading">
+<div>
+<p class="eyebrow"><span class="eyebrow-line"></span>04 — DADOS DA CIDADE</p>
+<h2 id="climate-title">Um sinal urbano<br/><em>entre muitos.</em></h2>
+</div>
+<p class="section-intro">
+            Chuva medida em estações do INMET complementa a conversa sobre o
+            território; não substitui relatos, alertas ou dados de alagamento.
+          </p>
+</div>
+<div aria-label="Resumo da base climática" class="signal-strip">
+<div class="strip-stat">
+<span class="strip-label">Estações</span>
+<strong id="station-count">—</strong>
+</div>
+<div class="strip-stat">
+<span class="strip-label">Observações completas</span>
+<strong id="observation-count">—</strong>
+</div>
+<div class="strip-stat">
+<span class="strip-label">Último dia na base</span>
+<strong id="latest-date">Carregando…</strong>
+</div>
+<div class="source-stamp">
+<span aria-hidden="true" class="source-stamp-dot"></span>
+<span id="source-name">FONTE OFICIAL · INMET</span>
+</div>
+</div>
+<div class="observation-layout">
+<article aria-labelledby="chart-title" class="chart-card">
+<div class="chart-topline">
+<div>
+<p class="card-overline">SÉRIE HISTÓRICA · DADOS REAIS</p>
+<h3 id="chart-title">Carregando observações</h3>
+</div>
+<div class="chart-controls">
+<div aria-label="Selecionar estação" class="station-switch" id="station-switch" role="group"></div>
+<div aria-label="Selecionar indicador" class="metric-switch" role="group">
+<button aria-pressed="true" class="metric-button is-selected" data-metric="chuva_dia_mm" type="button">Chuva (mm)</button>
+<button aria-pressed="false" class="metric-button" data-metric="horas_com_chuva" type="button">Horas</button>
+</div>
+</div>
+</div>
+<div class="chart-meta">
+<span id="chart-period">Últimos dias disponíveis</span>
+<span class="chart-legend"><span class="legend-dot"></span><span id="chart-metric-label">mm por dia</span></span>
+</div>
+<div class="chart-wrap">
+<svg aria-label="Gráfico de observações de chuva" id="rain-chart" role="img" viewbox="0 0 760 292"></svg>
+</div>
+<div class="chart-footer">
+<span><span class="footer-marker"></span>INMET · observação diária</span>
+<span id="chart-station-footer">—</span>
+</div>
+</article>
+<aside aria-labelledby="insight-title" class="insight-card">
+<div class="insight-top">
+<span aria-hidden="true" class="insight-icon">↗</span>
+<span class="insight-label">LEITURA DO DADO</span>
+</div>
+<p class="insight-number" id="latest-rain">—<small> mm</small></p>
+<h3 id="insight-title">Último acumulado diário</h3>
+<p class="insight-context" id="latest-context">Selecione uma estação para explorar a série histórica.</p>
+<div class="insight-divider"></div>
+<p class="insight-note">
+<strong>Chuva não é alagamento.</strong> Esta série não substitui
+              nível de rio, previsão ou alerta oficial.
+            </p>
+<span class="insight-foot">DADOS ABERTOS, DECISÕES RESPONSÁVEIS</span>
+</aside>
+</div>
+<div class="simulator" id="simulador">
+<div class="simulator-heading">
+<div>
+<p class="eyebrow eyebrow-light"><span class="eyebrow-line"></span>LABORATÓRIO ACADÊMICO</p>
+<h2>Explore um cenário<br/><em>de forma responsável.</em></h2>
+</div>
+<p>
+              Simulação local com regras provisórias em Python. Não é previsão,
+              alerta oficial ou serviço de emergência.
+            </p>
+</div>
+<div class="simulator-body">
+<form class="simulation-form" id="simulation-form">
+<div class="form-intro">
+<span class="form-step">SIMULAÇÃO LOCAL <span>·</span> SEM SENSORES</span>
+<span class="form-id">AVV / 01</span>
+</div>
+<div class="field-grid">
+<label class="field">
+<span class="field-label">Nível da água <small>cm</small></span>
+<span class="field-hint">Digite um valor hipotético</span>
+<span class="input-shell">
+<input max="300" min="0" name="nivel_agua_cm" required="" step="0.1" type="number" value="40"/>
+<span>cm</span>
+</span>
+<span class="field-range">Faixa do protótipo: 0–300 cm</span>
+</label>
+<label class="field">
+<span class="field-label">Intensidade da chuva <small>mm/h</small></span>
+<span class="field-hint">Valor manual; não é a chuva diária do gráfico</span>
+<span class="input-shell">
+<input max="200" min="0" name="chuva_mm_h" required="" step="0.1" type="number" value="5"/>
+<span>mm/h</span>
+</span>
+<span class="field-range">Faixa do protótipo: 0–200 mm/h</span>
+</label>
+</div>
+<button class="button button-lime simulate-button" type="submit">Avaliar cenário <span aria-hidden="true">→</span></button>
+<p class="form-error" hidden="" id="form-error" role="alert"></p>
+</form>
+<div aria-atomic="true" aria-live="polite" class="result-panel">
+<div class="result-placeholder" id="result-placeholder">
+<span aria-hidden="true" class="result-symbol">✳</span>
+<p>Seu cenário aparece aqui.</p>
+<span>Altere os valores e execute a simulação.</span>
+</div>
+<div class="result-content" hidden="" id="result-content">
+<div class="result-topline">
+<span class="result-overline">RESULTADO DO CENÁRIO</span>
+<span class="result-local">EXECUÇÃO LOCAL · PYTHON</span>
+</div>
+<p class="result-level" id="result-level">—</p>
+<p class="result-summary" id="result-summary">—</p>
+<div class="result-readings" id="result-readings"></div>
+<ul class="recommendations" id="recommendations"></ul>
+<p class="result-warning" id="result-warning"></p>
+</div>
+</div>
+</div>
+<p class="simulator-disclaimer"><span aria-hidden="true">!</span> Limites provisórios para fins acadêmicos; não são limites oficiais nem alertas de emergência.</p>
+</div>
+</section>
+<section aria-labelledby="about-title" class="about page-shell section-block" id="sobre">
+<div class="about-heading">
+<p class="eyebrow"><span class="eyebrow-line"></span>05 — SOBRE O AVIVA</p>
+<h2 id="about-title">Tecnologia que<br/><em>começa pelas pessoas.</em></h2>
+</div>
+<div class="about-copy">
+<p>
+            O AVIVA é uma proposta CitizenTech para aproximar moradores,
+            informações públicas e iniciativas locais. O protótipo prioriza
+            apoio mútuo e participação comunitária; clima é apenas uma das
+            dimensões da vida urbana.
+          </p>
+<div aria-label="Objetivos de Desenvolvimento Sustentável relacionados" class="ods-row">
+<div class="ods-badge ods-city"><span>ODS</span><strong>11</strong><small>CIDADES<br/>SUSTENTÁVEIS</small></div>
+<div class="ods-badge ods-climate"><span>ODS</span><strong>13</strong><small>AÇÃO<br/>CLIMÁTICA</small></div>
+<div class="ods-badge ods-women"><span>ODS</span><strong>5</strong><small>IGUALDADE<br/>DE GÊNERO</small></div>
+<p>Relação temática; este protótipo não comprova impacto nesses objetivos.</p>
+</div>
+</div>
+</section>
+<section aria-label="Transparência dos dados" class="data-note page-shell">
+<div aria-hidden="true" class="data-note-mark">i</div>
+<div>
+<strong>Dados reais, limites explícitos.</strong>
+<p>
+            Distritos: IBGE, API de localidades, município 3550308. Chuva:
+            arquivos históricos do INMET, estações A701 (Mirante) e A771
+            (Interlagos). Publicações do mural não são dados reais nem são
+            enviadas a um servidor. Os limites e pontos locais vêm do mapa
+            comunitário do OpenStreetMap, cuja cobertura pode variar.
+          </p>
+</div>
+<a href="https://servicodados.ibge.gov.br/api/v1/localidades/municipios/3550308/distritos" rel="noreferrer" target="_blank">Fonte IBGE <span aria-hidden="true">↗</span></a>
+</section>
+</main>
+<footer class="footer page-shell">
+<a aria-label="AVIVA, voltar ao início" class="brand footer-brand" href="#inicio">
+<img alt="" class="brand-mark" src="/aviva-marca.svg"/>
+<span class="brand-lockup">
+<span class="brand-word">aviva<span>.</span></span>
+<span class="brand-tagline">gente perto, cidade viva</span>
+</span>
+</a>
+<p>Tecnologia para melhorar a vida e promover autonomia.</p>
+<span class="footer-meta">PROTÓTIPO ACADÊMICO · 2026</span>
+</footer>
+</body>
+</html>

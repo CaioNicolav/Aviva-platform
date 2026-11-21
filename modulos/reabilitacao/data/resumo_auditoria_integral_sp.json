@@ -1,0 +1,48 @@
+{
+  "data_execucao": "2026-11-16",
+  "escopo": "Base CNES AVIVA da capital SP, conferência com Prefeitura de São Paulo AAUBS 2026",
+  "total_avaliados": 2647,
+  "total_no_filtro_sus_ambulatorial": 635,
+  "categorias": {
+    "CAPS": 122,
+    "CER": 45,
+    "OFICINA": 2,
+    "OUTROS": 1991,
+    "UBS": 487
+  },
+  "status_todos": {
+    "pendente_validacao_em_fonte_externa": 1829,
+    "sem_coordenadas_confiaveis": 177,
+    "suspeita_automatica_sem_referencia_externa": 163,
+    "ponto_correspondente_referencia_externa": 448,
+    "divergencia_endereco_entre_fontes": 29,
+    "ponto_fora_area_referencia_pendente": 1
+  },
+  "status_subset_app": {
+    "pendente_validacao_em_fonte_externa": 145,
+    "sem_coordenadas_confiaveis": 10,
+    "suspeita_automatica_sem_referencia_externa": 2,
+    "ponto_correspondente_referencia_externa": 448,
+    "divergencia_endereco_entre_fontes": 29,
+    "ponto_fora_area_referencia_pendente": 1
+  },
+  "referencia_externa_registros_carregados": 485,
+  "referencia_externa_matches_unicos": 448,
+  "fonte_externa_url": "https://prefeitura.sp.gov.br/web/saude/w/epidemiologia_e_informacao/geoprocessamento_e_informacoes_socioambientais/265388",
+  "fonte_externa_arquivo": "Estabelecimentos_de_Saude_Referencia_das_AAUBS2026.kmz",
+  "referencia_municipal_disponivel": true,
+  "areas_abrangencia_2026_total": 485,
+  "areas_abrangencia_e_pontos_mesmos_cnes": true,
+  "pontos_dentro_area": 479,
+  "pontos_fora_area": 6,
+  "comparacao_ubs_status": {
+    "endereco_consistente_2_fontes": 448,
+    "divergencia_endereco_entre_fontes": 29,
+    "referencia_municipal_sem_correspondencia_no_recorte_ubs": 7,
+    "ponto_fora_area_referencia_pendente": 1,
+    "CNES_UBS_sem_registro_na_camada_2026": 9
+  },
+  "validacao_integral_individual": false,
+  "validacao_externa_aplica_se_a": "UBS incluídas no KMZ, NÃO demais tipos de estabelecimentos",
+  "ressalva": "Pontos de UBS com CNES+CEP+rua+número compatíveis foram autorizados no mapa. Divergências e CAPS/CER/Oficinas continuam pendentes de confirmação cartográfica externa. As camadas de 2026 podem divergir do CNES mais recente; não asseguram atendimento ativo."
+}

@@ -1,0 +1,17 @@
+digraph AVIVA {graph [rankdir=LR, bgcolor="#ffffff", pad=0.28, nodesep=0.55, ranksep=1.05, splines=polyline, fontname="DejaVu Sans"]; node [shape=plain, fontname="DejaVu Sans"]; edge [color="#567D68",fontname="DejaVu Sans",fontsize=9,arrowsize=.6];
+ node [shape=box, style="rounded,filled",color="#a1c8b0",fillcolor="#e8f4eb",fontcolor="#183E2D",fontsize=12];
+ AVIVA [label="AVIVA • banco único",fillcolor="#144B33",fontcolor="white",fontsize=16];
+ FONTE [label="Fontes e procedência"];
+ SAUDE [label="Saúde / reabilitação"];
+ COM [label="Comunidade / clima / risco"];
+ EST [label="Estabelecimentos e categorias"];
+ GEO [label="Auditoria geográfica UBS"];
+ MOD [label="Modalidades (sem vínculo presumido)"];
+ CLIMA [label="Série histórica INMET"];
+ EVENTO [label="Eventos comunitários simulados"];
+ IOT [label="ESP32 + leituras demonstrativas"];
+ ALERT [label="Alertas do protótipo"];
+ AVIVA -> SAUDE; AVIVA -> COM; FONTE -> SAUDE [label="origem"]; FONTE -> COM [label="origem"];
+ SAUDE -> EST; EST -> GEO [label="1 : 0..1"]; EST -> MOD [label="N : N, se comprovado"];
+ COM -> CLIMA; COM -> EVENTO; COM -> IOT; IOT -> ALERT [label="1 : N / 1 : 1"];
+}

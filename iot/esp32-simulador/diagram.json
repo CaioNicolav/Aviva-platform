@@ -1,0 +1,192 @@
+{
+  "version": 1,
+  "author": "AVIVA - Global Solution",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 25,
+      "left": 25,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "nivel",
+      "top": -160,
+      "left": -260,
+      "attrs": {
+        "distance": "250"
+      }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "chuva",
+      "top": 160,
+      "left": -265,
+      "attrs": {
+        "value": "25"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledNormal",
+      "top": -130,
+      "left": 300,
+      "attrs": {
+        "color": "green",
+        "label": "NORMAL"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledAtencao",
+      "top": -50,
+      "left": 300,
+      "attrs": {
+        "color": "yellow",
+        "label": "ATENCAO"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledCritico",
+      "top": 30,
+      "left": 300,
+      "attrs": {
+        "color": "red",
+        "label": "CRITICO"
+      }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 135,
+      "left": 310,
+      "attrs": {
+        "volume": "0.20"
+      }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "umidade",
+      "top": -190,
+      "left": 185,
+      "attrs": {
+        "temperature": "24",
+        "humidity": "65"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:VIN",
+      "nivel:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.2",
+      "nivel:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:D5",
+      "nivel:TRIG",
+      "green",
+      []
+    ],
+    [
+      "nivel:ECHO",
+      "esp:D18",
+      "blue",
+      []
+    ],
+    [
+      "esp:3V3",
+      "chuva:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.2",
+      "chuva:GND",
+      "black",
+      []
+    ],
+    [
+      "chuva:SIG",
+      "esp:D34",
+      "orange",
+      []
+    ],
+    [
+      "esp:3V3",
+      "umidade:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "umidade:GND",
+      "black",
+      []
+    ],
+    [
+      "umidade:SDA",
+      "esp:D4",
+      "violet",
+      []
+    ],
+    [
+      "esp:D23",
+      "ledNormal:A",
+      "green",
+      []
+    ],
+    [
+      "ledNormal:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:D22",
+      "ledAtencao:A",
+      "gold",
+      []
+    ],
+    [
+      "ledAtencao:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:D21",
+      "ledCritico:A",
+      "red",
+      []
+    ],
+    [
+      "ledCritico:C",
+      "esp:GND.1",
+      "black",
+      []
+    ],
+    [
+      "esp:D19",
+      "buzzer:2",
+      "purple",
+      []
+    ],
+    [
+      "buzzer:1",
+      "esp:GND.1",
+      "black",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

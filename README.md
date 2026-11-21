@@ -91,9 +91,17 @@ aviva/
 │   ├── origens/                  # bases com procedência documentada
 │   ├── diagramas/                # MER/DER
 │   └── testes/                   # integridade offline
+├── iot/                          # firmware ESP32 / Wokwi
+├── machine-learning/             # notebooks e experimentos
 ├── infra/aws/                    # referência Lambda, SQL, evento e testes
 └── docs/                         # arquitetura, evidências e limitações
 ```
+
+## Dados públicos e modelagem
+
+A base exploratória CNES contém **27.779 registros** e está preservada integralmente em cinco partes GZIP, lidas automaticamente pelo módulo Saúde/Reabilitação. A integridade é verificada por SHA-256. Dados INMET históricos e eventos comunitários **sintéticos** também estão versionados. Veja a [documentação dos dados](docs/DADOS_PUBLICOS.md).
+
+![Modelo conceitual de dados MER do AVIVA](banco-de-dados/diagramas/01_MER_conceitual.png)
 
 ## Inventário dos códigos
 
@@ -101,6 +109,6 @@ Veja [`docs/MAPA_DOS_CODIGOS.md`](docs/MAPA_DOS_CODIGOS.md) para localizar os ar
 
 ## Autores e responsabilidade
 
-**Caio Nicolav e Leonardo da Silva** — concepção e desenvolvimento colaborativo. A concepção e o desenvolvimento são de Caio Nicolav e Leonardo da Silva; a versão pública não reproduz o histórico privado anterior, após revisão preventiva de segurança. Atribuições individuais não são inventadas sem evidência no histórico ou confirmação dos autores.
+**Caio Nicolav e Leonardo da Silva** — concepção e desenvolvimento colaborativo. A versão pública utiliza um histórico Git novo, sem importar os commits privados anteriores, como precaução de segurança. Atribuições individuais não são inventadas sem evidência no histórico ou confirmação dos autores.
 
 > Este repositório apresenta engenharia de software e dados com transparência sobre o estágio de cada módulo. As fontes públicas devem ter suas licenças e atualizações respeitadas. Não inserir dados pessoais, de pacientes nem credenciais em issues, testes ou demonstrações.

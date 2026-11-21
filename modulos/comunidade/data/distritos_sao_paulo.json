@@ -1,0 +1,391 @@
+{
+  "fonte": "IBGE - API de localidades, distritos do municipio de Sao Paulo (3550308)",
+  "url": "https://servicodados.ibge.gov.br/api/v1/localidades/municipios/3550308/distritos",
+  "consultado_em": "2026-11-16T19:31:13+00:00",
+  "distritos": [
+    {
+      "codigo_ibge": 355030802,
+      "nome": "Alto de Pinheiros"
+    },
+    {
+      "codigo_ibge": 355030803,
+      "nome": "Anhanguera"
+    },
+    {
+      "codigo_ibge": 355030804,
+      "nome": "Aricanduva"
+    },
+    {
+      "codigo_ibge": 355030805,
+      "nome": "Artur Alvim"
+    },
+    {
+      "codigo_ibge": 355030806,
+      "nome": "Barra Funda"
+    },
+    {
+      "codigo_ibge": 355030807,
+      "nome": "Bela Vista"
+    },
+    {
+      "codigo_ibge": 355030808,
+      "nome": "Belém"
+    },
+    {
+      "codigo_ibge": 355030809,
+      "nome": "Bom Retiro"
+    },
+    {
+      "codigo_ibge": 355030811,
+      "nome": "Brasilândia"
+    },
+    {
+      "codigo_ibge": 355030810,
+      "nome": "Brás"
+    },
+    {
+      "codigo_ibge": 355030812,
+      "nome": "Butantã"
+    },
+    {
+      "codigo_ibge": 355030813,
+      "nome": "Cachoeirinha"
+    },
+    {
+      "codigo_ibge": 355030814,
+      "nome": "Cambuci"
+    },
+    {
+      "codigo_ibge": 355030815,
+      "nome": "Campo Belo"
+    },
+    {
+      "codigo_ibge": 355030816,
+      "nome": "Campo Grande"
+    },
+    {
+      "codigo_ibge": 355030817,
+      "nome": "Campo Limpo"
+    },
+    {
+      "codigo_ibge": 355030818,
+      "nome": "Cangaiba"
+    },
+    {
+      "codigo_ibge": 355030819,
+      "nome": "Capão Redondo"
+    },
+    {
+      "codigo_ibge": 355030820,
+      "nome": "Carrão"
+    },
+    {
+      "codigo_ibge": 355030821,
+      "nome": "Casa Verde"
+    },
+    {
+      "codigo_ibge": 355030822,
+      "nome": "Cidade Ademar"
+    },
+    {
+      "codigo_ibge": 355030823,
+      "nome": "Cidade Dutra"
+    },
+    {
+      "codigo_ibge": 355030824,
+      "nome": "Cidade Lider"
+    },
+    {
+      "codigo_ibge": 355030825,
+      "nome": "Cidade Tiradentes"
+    },
+    {
+      "codigo_ibge": 355030826,
+      "nome": "Consolação"
+    },
+    {
+      "codigo_ibge": 355030827,
+      "nome": "Cursino"
+    },
+    {
+      "codigo_ibge": 355030828,
+      "nome": "Ermelino Matarazzo"
+    },
+    {
+      "codigo_ibge": 355030829,
+      "nome": "Freguesia do Ó"
+    },
+    {
+      "codigo_ibge": 355030830,
+      "nome": "Grajaú"
+    },
+    {
+      "codigo_ibge": 355030831,
+      "nome": "Guaianases"
+    },
+    {
+      "codigo_ibge": 355030833,
+      "nome": "Iguatemi"
+    },
+    {
+      "codigo_ibge": 355030834,
+      "nome": "Ipiranga"
+    },
+    {
+      "codigo_ibge": 355030835,
+      "nome": "Itaim Bibi"
+    },
+    {
+      "codigo_ibge": 355030836,
+      "nome": "Itaim Paulista"
+    },
+    {
+      "codigo_ibge": 355030837,
+      "nome": "Itaquera"
+    },
+    {
+      "codigo_ibge": 355030838,
+      "nome": "Jabaquara"
+    },
+    {
+      "codigo_ibge": 355030840,
+      "nome": "Jaguara"
+    },
+    {
+      "codigo_ibge": 355030841,
+      "nome": "Jaguaré"
+    },
+    {
+      "codigo_ibge": 355030842,
+      "nome": "Jaraguá"
+    },
+    {
+      "codigo_ibge": 355030844,
+      "nome": "Jardim Helena"
+    },
+    {
+      "codigo_ibge": 355030845,
+      "nome": "Jardim Paulista"
+    },
+    {
+      "codigo_ibge": 355030846,
+      "nome": "Jardim São Luís"
+    },
+    {
+      "codigo_ibge": 355030843,
+      "nome": "Jardim Ângela"
+    },
+    {
+      "codigo_ibge": 355030839,
+      "nome": "Jaçanã"
+    },
+    {
+      "codigo_ibge": 355030847,
+      "nome": "José Bonifácio"
+    },
+    {
+      "codigo_ibge": 355030896,
+      "nome": "Lajeado"
+    },
+    {
+      "codigo_ibge": 355030848,
+      "nome": "Lapa"
+    },
+    {
+      "codigo_ibge": 355030849,
+      "nome": "Liberdade"
+    },
+    {
+      "codigo_ibge": 355030850,
+      "nome": "Limão"
+    },
+    {
+      "codigo_ibge": 355030851,
+      "nome": "Mandaqui"
+    },
+    {
+      "codigo_ibge": 355030852,
+      "nome": "Marsilac"
+    },
+    {
+      "codigo_ibge": 355030832,
+      "nome": "Moema"
+    },
+    {
+      "codigo_ibge": 355030853,
+      "nome": "Mooca"
+    },
+    {
+      "codigo_ibge": 355030854,
+      "nome": "Morumbi"
+    },
+    {
+      "codigo_ibge": 355030855,
+      "nome": "Parelheiros"
+    },
+    {
+      "codigo_ibge": 355030856,
+      "nome": "Pari"
+    },
+    {
+      "codigo_ibge": 355030857,
+      "nome": "Parque do Carmo"
+    },
+    {
+      "codigo_ibge": 355030858,
+      "nome": "Pedreira"
+    },
+    {
+      "codigo_ibge": 355030859,
+      "nome": "Penha"
+    },
+    {
+      "codigo_ibge": 355030860,
+      "nome": "Perdizes"
+    },
+    {
+      "codigo_ibge": 355030861,
+      "nome": "Perus"
+    },
+    {
+      "codigo_ibge": 355030862,
+      "nome": "Pinheiros"
+    },
+    {
+      "codigo_ibge": 355030863,
+      "nome": "Pirituba"
+    },
+    {
+      "codigo_ibge": 355030864,
+      "nome": "Ponte Rasa"
+    },
+    {
+      "codigo_ibge": 355030865,
+      "nome": "Raposo Tavares"
+    },
+    {
+      "codigo_ibge": 355030866,
+      "nome": "República"
+    },
+    {
+      "codigo_ibge": 355030867,
+      "nome": "Rio Pequeno"
+    },
+    {
+      "codigo_ibge": 355030868,
+      "nome": "Sacomã"
+    },
+    {
+      "codigo_ibge": 355030869,
+      "nome": "Santa Cecília"
+    },
+    {
+      "codigo_ibge": 355030870,
+      "nome": "Santana"
+    },
+    {
+      "codigo_ibge": 355030871,
+      "nome": "Santo Amaro"
+    },
+    {
+      "codigo_ibge": 355030876,
+      "nome": "Sapopemba"
+    },
+    {
+      "codigo_ibge": 355030877,
+      "nome": "Saúde"
+    },
+    {
+      "codigo_ibge": 355030879,
+      "nome": "Socorro"
+    },
+    {
+      "codigo_ibge": 355030895,
+      "nome": "São Domingos"
+    },
+    {
+      "codigo_ibge": 355030872,
+      "nome": "São Lucas"
+    },
+    {
+      "codigo_ibge": 355030873,
+      "nome": "São Mateus"
+    },
+    {
+      "codigo_ibge": 355030874,
+      "nome": "São Miguel"
+    },
+    {
+      "codigo_ibge": 355030875,
+      "nome": "São Rafael"
+    },
+    {
+      "codigo_ibge": 355030878,
+      "nome": "Sé"
+    },
+    {
+      "codigo_ibge": 355030880,
+      "nome": "Tatuapé"
+    },
+    {
+      "codigo_ibge": 355030881,
+      "nome": "Tremembé"
+    },
+    {
+      "codigo_ibge": 355030882,
+      "nome": "Tucuruvi"
+    },
+    {
+      "codigo_ibge": 355030883,
+      "nome": "Vila Andrade"
+    },
+    {
+      "codigo_ibge": 355030884,
+      "nome": "Vila Curuçá"
+    },
+    {
+      "codigo_ibge": 355030885,
+      "nome": "Vila Formosa"
+    },
+    {
+      "codigo_ibge": 355030886,
+      "nome": "Vila Guilherme"
+    },
+    {
+      "codigo_ibge": 355030887,
+      "nome": "Vila Jacuí"
+    },
+    {
+      "codigo_ibge": 355030888,
+      "nome": "Vila Leopoldina"
+    },
+    {
+      "codigo_ibge": 355030889,
+      "nome": "Vila Maria"
+    },
+    {
+      "codigo_ibge": 355030890,
+      "nome": "Vila Mariana"
+    },
+    {
+      "codigo_ibge": 355030891,
+      "nome": "Vila Matilde"
+    },
+    {
+      "codigo_ibge": 355030892,
+      "nome": "Vila Medeiros"
+    },
+    {
+      "codigo_ibge": 355030893,
+      "nome": "Vila Prudente"
+    },
+    {
+      "codigo_ibge": 355030894,
+      "nome": "Vila Sônia"
+    },
+    {
+      "codigo_ibge": 355030801,
+      "nome": "Água Rasa"
+    }
+  ]
+}
